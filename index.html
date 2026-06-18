@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jewoo Suh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.65;
+      color: #111;
+      background: #fff;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    /* --- HEADER --- */
+    header {
+      margin-bottom: 48px;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+
+    header .contact {
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    header .contact a {
+      color: #555;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header .contact a:hover { color: #111; border-color: #111; }
+
+    header .interests {
+      margin-top: 12px;
+      font-size: 0.88rem;
+      color: #333;
+      font-style: italic;
+    }
+
+    /* --- SECTIONS --- */
+    section {
+      margin-bottom: 44px;
+    }
+
+    section h2 {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+
+    /* --- PUBLICATIONS --- */
+    .pub-list {
+      list-style: none;
+    }
+
+    .pub-list li {
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+      padding-left: 2em;
+      text-indent: -2em;
+    }
+
+    .pub-list .pub-title {
+      font-style: italic;
+    }
+
+    .pub-list .pub-meta {
+      color: #666;
+      font-size: 0.82rem;
+    }
+
+    /* --- PROJECTS --- */
+    .project {
+      margin-bottom: 28px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .project-header h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .project-header .status {
+      font-size: 0.78rem;
+      color: #999;
+      font-style: italic;
+    }
+
+    .project p {
+      font-size: 0.88rem;
+      color: #333;
+      margin-bottom: 6px;
+    }
+
+    .project .tag {
+      font-size: 0.75rem;
+      color: #999;
+      letter-spacing: 0.04em;
+    }
+
+    .project a {
+      font-size: 0.8rem;
+      color: #555;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .project a:hover { color: #111; border-color: #111; }
+
+    /* --- FOOTER --- */
+    footer {
+      margin-top: 64px;
+      font-size: 0.78rem;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Jewoo Suh</h1>
+    <div class="contact">
+      jewoosuh@gmail.com
+      &nbsp;&middot;&nbsp;
+      <a href="#">yourwebsite.com</a>
+    </div>
+    <div class="interests">
+      Knowledge Representation &amp; Reasoning &nbsp;&middot;&nbsp;
+      Ontology &nbsp;&middot;&nbsp;
+      Mathematical &amp; Computational Sciences &nbsp;&middot;&nbsp;
+      Theoretical Computer Science
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About</h2>
+    <p>
+      I am a Research Engineer at LIG Defense &amp; Aerospace (LIG D&amp;A), serving as Technical Research Personnel. I hold an Integrated Master's in Mathematics and Computer Science (MMathCompSci) from the University of Oxford, Christ Church College.
+    </p>
+    <p style="margin-top: 10px;">
+      My research sits at the intersection of formal knowledge systems and computational science — I am interested in how knowledge can be rigorously structured, connected across domains, and made computationally tractable.
+    </p>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section>
+    <h2>Publications</h2>
+    <ol class="pub-list">
+      <li>
+        J. Suh et al.
+        <span class="pub-title">"Iterated Self-Evaluation Impossibility for Large Language Models."</span>
+        <span class="pub-meta">In preparation, IEEE Access, 2026.</span>
+      </li>
+      <li>
+        J. Suh et al.
+        <span class="pub-title">"Truthful Task and Resource Allocation in Leader&ndash;Follower Agent Organisations."</span>
+        <span class="pub-meta">In preparation, PRIMA 2026.</span>
+      </li>
+      <li>
+        W.-S. Kim et al. (incl. J. Suh).
+        <span class="pub-title">"[Digital Twin-Verified Design and Development of a USV Swarm Command and Control System]."</span>
+        <span class="pub-meta">In preparation, JKIICE, 2026.</span>
+      </li>
+      <li>
+        J. Suh.
+        <span class="pub-title">"<code>.sillok</code>: A Korean-Specific Lossless Text Encoding Format for Linguistically-Informed Compression and Long-Term Archival."</span>
+        <span class="pub-meta">Preprint, 2026. &nbsp;<a href="https://jewoo-suh.github.io/modern-sillok/sillok_paper.pdf">PDF</a></span>
+      </li>
+      <li>
+        J. Suh.
+        <span class="pub-title">"Designing the VG8: An FPGA-Based 8-bit Game Console for Comparative Analysis of 1980s Personal Computers and Game Consoles."</span>
+        <span class="pub-meta">MMathCompSci Thesis, University of Oxford, 2025.</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>Cross-Domain</h3>
+        <span class="status">ongoing</span>
+      </div>
+      <p>
+        A pipeline for formalising the language of scientific publications into a unified representational structure, then connecting seemingly unrelated papers across fields to surface hidden answers to hard problems. Inspired by Swanson-style literature-based discovery, it builds a cross-field knowledge graph spanning medicine, physics, and engineering.
+      </p>
+      <span class="tag">Knowledge Formalisation &nbsp;&middot;&nbsp; Automated Discovery &nbsp;&middot;&nbsp; Solo</span>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>Language Evolution Simulator</h3>
+        <span class="status">ongoing</span>
+      </div>
+      <p>
+        A genetic-algorithm simulation of language emergence from scratch: agents produce sounds and evolve communication with no prior structure. Currently achieved a fully-emergent artificial language with deterministic compositional grammar, 86% role-decoding accuracy, a ~50-word lexicon with CVC phonology, and four emergent grammatical categories (number, degree, aspect, magnitude) with evidentiality and tense.
+      </p>
+      <span class="tag">Genetic Algorithms &nbsp;&middot;&nbsp; Computational Linguistics &nbsp;&middot;&nbsp; Solo</span>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>Voynich Decode Project</h3>
+        <span class="status">closed</span>
+      </div>
+      <p>
+        Statistical modelling of the Voynich Manuscript, a 15th-century illustrated codex written in an unknown script. Reproduced the manuscript's structural properties via a ~200-unit combinatorial generative procedure, providing statistical evidence that it is a content-free artefact and falsifying the cipher hypothesis.
+      </p>
+      <span class="tag">Statistical Analysis &nbsp;&middot;&nbsp; Computational Linguistics &nbsp;&middot;&nbsp; Solo</span>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <h3>Pokémon Ecosystem Simulator</h3>
+        <span class="status">closed</span>
+      </div>
+      <p>
+        An agent-based ecological simulation where 1,000+ Pokémon species are placed into a world of biomes and left to interact. Ecologically-derived traits (metabolism, reproduction, predation) computed from real game data; food chains, population booms, crashes, and equilibria emerge organically. Conceptually: Conway's Game of Life &times; Lotka&ndash;Volterra dynamics.
+      </p>
+      <span class="tag">Agent-Based Simulation &nbsp;&middot;&nbsp; Ecological Modelling &nbsp;&middot;&nbsp; Solo &nbsp;&middot;&nbsp;
+      <a href="https://jewoo-suh.github.io/pokemon-ecosystem-simulator/">Live demo</a></span>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#" style="color:#bbb; text-decoration:none; border-bottom: 1px solid #ddd;">Download CV</a>
+  </footer>
+
+</body>
+</html>
