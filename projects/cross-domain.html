@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cross-Domain &mdash; Jewoo Suh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Jewoo Suh</a>
+    <span>/</span>
+    Projects
+    <span>/</span>
+    Cross-Domain
+  </div>
+
+  <h1 class="page-title">Cross-Domain</h1>
+  <div class="page-meta">Ongoing &nbsp;&middot;&nbsp; Solo &nbsp;&middot;&nbsp; Knowledge Formalisation &nbsp;&middot;&nbsp; Automated Discovery</div>
+
+  <!-- Abstract network graph -->
+  <svg class="page-hero-svg" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg">
+    <rect width="680" height="340" fill="#f8f8f6"/>
+
+    <!-- distant cluster edges -->
+    <line x1="340" y1="170" x2="150" y2="80"  stroke="#c0c0b8" stroke-width="1.2"/>
+    <line x1="340" y1="170" x2="530" y2="80"  stroke="#c0c0b8" stroke-width="1.2"/>
+    <line x1="340" y1="170" x2="120" y2="260" stroke="#c0c0b8" stroke-width="1.2"/>
+    <line x1="340" y1="170" x2="560" y2="270" stroke="#c0c0b8" stroke-width="1.2"/>
+    <line x1="340" y1="170" x2="340" y2="300" stroke="#c0c0b8" stroke-width="1.2"/>
+    <line x1="340" y1="170" x2="200" y2="180" stroke="#c0c0b8" stroke-width="1.2"/>
+    <line x1="340" y1="170" x2="480" y2="175" stroke="#c0c0b8" stroke-width="1.2"/>
+
+    <!-- local cluster edges - physics cluster -->
+    <line x1="150" y1="80" x2="90"  y2="45"  stroke="#d5d5cc" stroke-width="0.9"/>
+    <line x1="150" y1="80" x2="185" y2="38"  stroke="#d5d5cc" stroke-width="0.9"/>
+    <line x1="150" y1="80" x2="100" y2="120" stroke="#d5d5cc" stroke-width="0.9"/>
+
+    <!-- local cluster edges - biology cluster -->
+    <line x1="530" y1="80" x2="580" y2="42"  stroke="#d5d5cc" stroke-width="0.9"/>
+    <line x1="530" y1="80" x2="490" y2="38"  stroke="#d5d5cc" stroke-width="0.9"/>
+    <line x1="530" y1="80" x2="575" y2="115" stroke="#d5d5cc" stroke-width="0.9"/>
+
+    <!-- local cluster edges - medicine cluster -->
+    <line x1="120" y1="260" x2="65"  y2="280" stroke="#d5d5cc" stroke-width="0.9"/>
+    <line x1="120" y1="260" x2="85"  y2="225" stroke="#d5d5cc" stroke-width="0.9"/>
+    <line x1="120" y1="260" x2="150" y2="300" stroke="#d5d5cc" stroke-width="0.9"/>
+
+    <!-- local cluster edges - engineering cluster -->
+    <line x1="560" y1="270" x2="610" y2="240" stroke="#d5d5cc" stroke-width="0.9"/>
+    <line x1="560" y1="270" x2="590" y2="305" stroke="#d5d5cc" stroke-width="0.9"/>
+    <line x1="560" y1="270" x2="522" y2="305" stroke="#d5d5cc" stroke-width="0.9"/>
+
+    <!-- cross-field bridging edges (dashed) -->
+    <line x1="150" y1="80"  x2="120" y2="260" stroke="#a8a8a0" stroke-width="0.9" stroke-dasharray="5 4"/>
+    <line x1="530" y1="80"  x2="560" y2="270" stroke="#a8a8a0" stroke-width="0.9" stroke-dasharray="5 4"/>
+    <line x1="150" y1="80"  x2="530" y2="80"  stroke="#a8a8a0" stroke-width="0.9" stroke-dasharray="5 4"/>
+    <line x1="120" y1="260" x2="560" y2="270" stroke="#a8a8a0" stroke-width="0.9" stroke-dasharray="5 4"/>
+    <line x1="200" y1="180" x2="120" y2="260" stroke="#b8b8b0" stroke-width="0.8" stroke-dasharray="4 3"/>
+    <line x1="480" y1="175" x2="560" y2="270" stroke="#b8b8b0" stroke-width="0.8" stroke-dasharray="4 3"/>
+
+    <!-- cluster labels -->
+    <text x="150" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">Physics</text>
+    <text x="530" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">Biology</text>
+    <text x="120" y="252" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">Medicine</text>
+    <text x="560" y="262" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#888">Engineering</text>
+
+    <!-- main nodes -->
+    <circle cx="340" cy="170" r="12"  fill="#444"/>
+    <circle cx="150" cy="80"  r="7"   fill="#777"/>
+    <circle cx="530" cy="80"  r="7"   fill="#777"/>
+    <circle cx="120" cy="260" r="7"   fill="#777"/>
+    <circle cx="560" cy="270" r="7"   fill="#777"/>
+    <circle cx="340" cy="300" r="6"   fill="#888"/>
+    <circle cx="200" cy="180" r="6"   fill="#888"/>
+    <circle cx="480" cy="175" r="6"   fill="#888"/>
+
+    <!-- satellite nodes -->
+    <circle cx="90"  cy="45"  r="4" fill="#aaa"/>
+    <circle cx="185" cy="38"  r="4" fill="#aaa"/>
+    <circle cx="100" cy="120" r="4" fill="#aaa"/>
+    <circle cx="580" cy="42"  r="4" fill="#aaa"/>
+    <circle cx="490" cy="38"  r="4" fill="#aaa"/>
+    <circle cx="575" cy="115" r="4" fill="#aaa"/>
+    <circle cx="65"  cy="280" r="3.5" fill="#bbb"/>
+    <circle cx="85"  cy="225" r="3.5" fill="#bbb"/>
+    <circle cx="150" cy="300" r="3.5" fill="#bbb"/>
+    <circle cx="610" cy="240" r="3.5" fill="#bbb"/>
+    <circle cx="590" cy="305" r="3.5" fill="#bbb"/>
+    <circle cx="522" cy="305" r="3.5" fill="#bbb"/>
+  </svg>
+
+  <div class="page-body">
+
+    <p>
+      Cross-Domain is a pipeline for formalising the language of scientific publications into a unified representational structure, then connecting seemingly unrelated papers across fields to surface answers to hard problems that no single field has been able to solve alone.
+    </p>
+
+    <h3>Motivation</h3>
+
+    <p>
+      The scientific literature is enormous and fragmented. A biologist and an engineer may have solved complementary halves of the same problem without knowing it, because the concepts they use look different on the surface even when they are structurally identical. Informal reading cannot scale across fields; keyword search misses structural similarity; citation networks only connect papers that already knew about each other.
+    </p>
+
+    <p>
+      The project is inspired by Swanson-style literature-based discovery: Don Swanson demonstrated in the 1980s that published papers in separate fields, never citing each other, could be connected by a chain of logical implication to produce genuinely novel scientific hypotheses. His method was manual and limited to two hops. The question this project asks is whether the same kind of cross-field bridging can be done systematically, at scale, across the full published record.
+    </p>
+
+    <h3>Approach</h3>
+
+    <p>
+      The pipeline converts the natural language of scientific claims into formal representational structures that are field-agnostic. Once claims from different fields are expressed in the same formal language, structural equivalences become computable rather than inferential. A cross-field knowledge graph is then built over these representations, spanning medicine, physics, engineering, and other domains. Graph traversal and formal reasoning identify latent connections: cases where a known result in one field implies an untested hypothesis in another.
+    </p>
+
+    <h3>Status</h3>
+
+    <p>
+      The project is ongoing. It is a long-term research programme rather than a fixed-scope project. Architectural and methodological details are not public at this stage.
+    </p>
+
+  </div>
+
+  <div class="page-tags">Knowledge Formalisation &nbsp;&middot;&nbsp; Automated Discovery &nbsp;&middot;&nbsp; Knowledge Representation &nbsp;&middot;&nbsp; Solo</div>
+
+</body>
+</html>

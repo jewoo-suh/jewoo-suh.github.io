@@ -6,151 +6,16 @@
   <title>Jewoo Suh</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 15px;
-      line-height: 1.65;
-      color: #111;
-      background: #fff;
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 64px 24px 96px;
-    }
-
-    /* --- HEADER --- */
-    header {
-      margin-bottom: 48px;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      margin-bottom: 4px;
-    }
-
-    header .contact {
-      font-size: 0.85rem;
-      color: #555;
-    }
-
-    header .contact a {
-      color: #555;
-      text-decoration: none;
-      border-bottom: 1px solid #ccc;
-    }
-
-    header .contact a:hover { color: #111; border-color: #111; }
-
-    header .interests {
-      margin-top: 12px;
-      font-size: 0.88rem;
-      color: #333;
-      font-style: italic;
-    }
-
-    /* --- SECTIONS --- */
-    section {
-      margin-bottom: 44px;
-    }
-
-    section h2 {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #888;
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 6px;
-      margin-bottom: 20px;
-    }
-
-    /* --- PUBLICATIONS --- */
-    .pub-list {
-      list-style: none;
-    }
-
-    .pub-list li {
-      margin-bottom: 14px;
-      font-size: 0.9rem;
-      padding-left: 2em;
-      text-indent: -2em;
-    }
-
-    .pub-list .pub-title {
-      font-style: italic;
-    }
-
-    .pub-list .pub-meta {
-      color: #666;
-      font-size: 0.82rem;
-    }
-
-    /* --- PROJECTS --- */
-    .project {
-      margin-bottom: 28px;
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 4px;
-    }
-
-    .project-header h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .project-header .status {
-      font-size: 0.78rem;
-      color: #999;
-      font-style: italic;
-    }
-
-    .project p {
-      font-size: 0.88rem;
-      color: #333;
-      margin-bottom: 6px;
-    }
-
-    .project .tag {
-      font-size: 0.75rem;
-      color: #999;
-      letter-spacing: 0.04em;
-    }
-
-    .project a {
-      font-size: 0.8rem;
-      color: #555;
-      text-decoration: none;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .project a:hover { color: #111; border-color: #111; }
-
-    /* --- FOOTER --- */
-    footer {
-      margin-top: 64px;
-      font-size: 0.78rem;
-      color: #bbb;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <h1>Jewoo Suh</h1>
     <div class="contact">
       jewoosuh@gmail.com
       &nbsp;&middot;&nbsp;
-      <a href="#">yourwebsite.com</a>
+      <a href="https://jewoo-suh.github.io">jewoo-suh.github.io</a>
     </div>
     <div class="interests">
       Knowledge Representation &amp; Reasoning &nbsp;&middot;&nbsp;
@@ -160,7 +25,6 @@
     </div>
   </header>
 
-  <!-- ABOUT -->
   <section>
     <h2>About</h2>
     <p>
@@ -168,92 +32,171 @@
     </p>
   </section>
 
-  <!-- PUBLICATIONS -->
   <section>
     <h2>Publications</h2>
     <ol class="pub-list">
       <li>
         J. Suh et al.
-        <span class="pub-title">"Iterated Self-Evaluation Impossibility for Large Language Models."</span>
+        <a class="pub-title" href="publications/iterated-self-eval.html">&ldquo;Iterated Self-Evaluation Impossibility for Large Language Models.&rdquo;</a>
         <span class="pub-meta">In preparation, IEEE Access, 2026.</span>
       </li>
       <li>
         J. Suh et al.
-        <span class="pub-title">"Truthful Task and Resource Allocation in Leader&ndash;Follower Agent Organisations."</span>
+        <a class="pub-title" href="publications/truthful-allocation.html">&ldquo;Truthful Task and Resource Allocation in Leader&ndash;Follower Agent Organisations.&rdquo;</a>
         <span class="pub-meta">In preparation, PRIMA 2026.</span>
       </li>
       <li>
         W.-S. Kim et al. (incl. J. Suh).
-        <span class="pub-title">"[Digital Twin-Verified Design and Development of a USV Swarm Command and Control System]."</span>
+        <a class="pub-title" href="publications/usv-swarm.html">&ldquo;[Digital Twin-Verified Design and Development of a USV Swarm Command and Control System].&rdquo;</a>
         <span class="pub-meta">In preparation, JKIICE, 2026.</span>
       </li>
       <li>
         J. Suh.
-        <span class="pub-title">"<code>.sillok</code>: A Korean-Specific Lossless Text Encoding Format for Linguistically-Informed Compression and Long-Term Archival."</span>
-        <span class="pub-meta">Preprint, 2026. &nbsp;<a href="https://jewoo-suh.github.io/modern-sillok/sillok_paper.pdf">PDF</a></span>
+        <a class="pub-title" href="publications/sillok.html">&ldquo;<code>.sillok</code>: A Korean-Specific Lossless Text Encoding Format for Linguistically-Informed Compression and Long-Term Archival.&rdquo;</a>
+        <span class="pub-meta">Preprint, 2026.</span>
       </li>
       <li>
         J. Suh.
-        <span class="pub-title">"Designing the VG8: An FPGA-Based 8-bit Game Console for Comparative Analysis of 1980s Personal Computers and Game Consoles."</span>
+        <a class="pub-title" href="publications/vg8.html">&ldquo;Designing the VG8: An FPGA-Based 8-bit Game Console for Comparative Analysis of 1980s Personal Computers and Game Consoles.&rdquo;</a>
         <span class="pub-meta">MMathCompSci Thesis, University of Oxford, 2025.</span>
       </li>
     </ol>
   </section>
 
-  <!-- PROJECTS -->
   <section>
     <h2>Projects</h2>
+    <div class="card-grid">
 
-    <div class="project">
-      <div class="project-header">
-        <h3>Cross-Domain</h3>
-        <span class="status">ongoing</span>
-      </div>
-      <p>
-        A pipeline for formalising the language of scientific publications into a unified representational structure, then connecting seemingly unrelated papers across fields to surface hidden answers to hard problems. Inspired by Swanson-style literature-based discovery, it builds a cross-field knowledge graph spanning medicine, physics, and engineering.
-      </p>
-      <span class="tag">Knowledge Formalisation &nbsp;&middot;&nbsp; Automated Discovery &nbsp;&middot;&nbsp; Solo</span>
+      <a class="card" href="projects/cross-domain.html">
+        <!-- Abstract network graph representing knowledge formalisation -->
+        <svg class="card-thumb-svg" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+          <rect width="320" height="180" fill="#f8f8f6"/>
+          <!-- edges -->
+          <line x1="160" y1="90" x2="80"  y2="45"  stroke="#c8c8c0" stroke-width="1"/>
+          <line x1="160" y1="90" x2="240" y2="45"  stroke="#c8c8c0" stroke-width="1"/>
+          <line x1="160" y1="90" x2="60"  y2="120" stroke="#c8c8c0" stroke-width="1"/>
+          <line x1="160" y1="90" x2="260" y2="130" stroke="#c8c8c0" stroke-width="1"/>
+          <line x1="160" y1="90" x2="160" y2="155" stroke="#c8c8c0" stroke-width="1"/>
+          <line x1="80"  y1="45" x2="40"  y2="70"  stroke="#ddd"    stroke-width="0.8"/>
+          <line x1="80"  y1="45" x2="120" y2="20"  stroke="#ddd"    stroke-width="0.8"/>
+          <line x1="240" y1="45" x2="280" y2="65"  stroke="#ddd"    stroke-width="0.8"/>
+          <line x1="240" y1="45" x2="210" y2="18"  stroke="#ddd"    stroke-width="0.8"/>
+          <line x1="60"  y1="120" x2="30" y2="148" stroke="#ddd"    stroke-width="0.8"/>
+          <line x1="260" y1="130" x2="290" y2="155" stroke="#ddd"   stroke-width="0.8"/>
+          <line x1="160" y1="155" x2="130" y2="170" stroke="#ddd"   stroke-width="0.8"/>
+          <line x1="160" y1="155" x2="190" y2="172" stroke="#ddd"   stroke-width="0.8"/>
+          <!-- cross-field connector lines (dashed) -->
+          <line x1="80" y1="45" x2="60" y2="120" stroke="#b8b8b0" stroke-width="0.8" stroke-dasharray="4 3"/>
+          <line x1="240" y1="45" x2="260" y2="130" stroke="#b8b8b0" stroke-width="0.8" stroke-dasharray="4 3"/>
+          <!-- nodes -->
+          <circle cx="160" cy="90"  r="8"   fill="#555"/>
+          <circle cx="80"  cy="45"  r="5.5" fill="#888"/>
+          <circle cx="240" cy="45"  r="5.5" fill="#888"/>
+          <circle cx="60"  cy="120" r="5"   fill="#999"/>
+          <circle cx="260" cy="130" r="5"   fill="#999"/>
+          <circle cx="160" cy="155" r="4.5" fill="#999"/>
+          <circle cx="40"  cy="70"  r="3"   fill="#bbb"/>
+          <circle cx="120" cy="20"  r="3"   fill="#bbb"/>
+          <circle cx="280" cy="65"  r="3"   fill="#bbb"/>
+          <circle cx="210" cy="18"  r="3"   fill="#bbb"/>
+          <circle cx="30"  cy="148" r="3"   fill="#bbb"/>
+          <circle cx="290" cy="155" r="3"   fill="#bbb"/>
+          <circle cx="130" cy="170" r="2.5" fill="#ccc"/>
+          <circle cx="190" cy="172" r="2.5" fill="#ccc"/>
+        </svg>
+        <div class="card-body">
+          <h3>Cross-Domain</h3>
+          <p>Formalising the language of scientific publications into unified representational structures, connecting papers across fields to surface hidden answers.</p>
+          <div class="card-foot">
+            <span class="status">ongoing</span>
+            <span>Knowledge Formalisation</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/language-evolution.html">
+        <img class="card-thumb" src="assets/img/lang-evo-thumb.png" alt="Language Evolution Simulator biome map" />
+        <div class="card-body">
+          <h3>Language Evolution Simulator</h3>
+          <p>Genetic-algorithm simulation of language emergence from scratch: agents evolve communication with no prior structure.</p>
+          <div class="card-foot">
+            <span class="status">ongoing</span>
+            <span>Genetic Algorithms</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/voynich.html">
+        <img class="card-thumb" src="assets/img/voynich-thumb.png" alt="Voynich statistical analysis ridge plot" />
+        <div class="card-body">
+          <h3>Voynich Decode Project</h3>
+          <p>Statistical modelling of the Voynich Manuscript, providing evidence it is a content-free artefact and falsifying the cipher hypothesis.</p>
+          <div class="card-foot">
+            <span class="status">closed</span>
+            <span>Statistical Analysis</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/pokemon-sim.html">
+        <!-- Stylised biome grid -->
+        <svg class="card-thumb-svg" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect width="20" height="20" fill="none"/>
+            </pattern>
+          </defs>
+          <!-- biome background regions -->
+          <rect x="0"   y="0"   width="80"  height="90"  fill="#b8d4a8"/>
+          <rect x="80"  y="0"   width="80"  height="60"  fill="#e8d4a0"/>
+          <rect x="160" y="0"   width="80"  height="90"  fill="#a8c4d8"/>
+          <rect x="240" y="0"   width="80"  height="90"  fill="#c4b8a0"/>
+          <rect x="0"   y="90"  width="100" height="90"  fill="#d8c4a8"/>
+          <rect x="100" y="60"  width="80"  height="120" fill="#c8d8b8"/>
+          <rect x="180" y="90"  width="80"  height="90"  fill="#b8c8d8"/>
+          <rect x="260" y="90"  width="60"  height="90"  fill="#d4c0b0"/>
+          <!-- overlay for depth -->
+          <rect width="320" height="180" fill="rgba(255,255,255,0.15)"/>
+          <!-- agent dots -->
+          <circle cx="32"  cy="30"  r="3.5" fill="#e05555" opacity="0.85"/>
+          <circle cx="55"  cy="58"  r="2.5" fill="#e07730" opacity="0.85"/>
+          <circle cx="18"  cy="72"  r="3"   fill="#e05555" opacity="0.85"/>
+          <circle cx="70"  cy="22"  r="2.5" fill="#884488" opacity="0.85"/>
+          <circle cx="110" cy="18"  r="3"   fill="#e0c030" opacity="0.85"/>
+          <circle cx="138" cy="44"  r="2.5" fill="#e07730" opacity="0.85"/>
+          <circle cx="118" cy="38"  r="2"   fill="#e0c030" opacity="0.85"/>
+          <circle cx="185" cy="25"  r="3.5" fill="#3388cc" opacity="0.85"/>
+          <circle cx="205" cy="60"  r="2.5" fill="#3388cc" opacity="0.85"/>
+          <circle cx="222" cy="38"  r="3"   fill="#33aa66" opacity="0.85"/>
+          <circle cx="268" cy="20"  r="2.5" fill="#cc4444" opacity="0.85"/>
+          <circle cx="290" cy="48"  r="3"   fill="#884488" opacity="0.85"/>
+          <circle cx="42"  cy="110" r="3"   fill="#e07730" opacity="0.85"/>
+          <circle cx="70"  cy="140" r="2.5" fill="#33aa66" opacity="0.85"/>
+          <circle cx="88"  cy="118" r="2"   fill="#e05555" opacity="0.85"/>
+          <circle cx="130" cy="100" r="3"   fill="#3388cc" opacity="0.85"/>
+          <circle cx="155" cy="148" r="2.5" fill="#884488" opacity="0.85"/>
+          <circle cx="148" cy="125" r="3.5" fill="#e0c030" opacity="0.85"/>
+          <circle cx="200" cy="110" r="3"   fill="#cc4444" opacity="0.85"/>
+          <circle cx="225" cy="148" r="2.5" fill="#33aa66" opacity="0.85"/>
+          <circle cx="240" cy="128" r="2"   fill="#e07730" opacity="0.85"/>
+          <circle cx="275" cy="115" r="3"   fill="#e05555" opacity="0.85"/>
+          <circle cx="295" cy="158" r="2.5" fill="#3388cc" opacity="0.85"/>
+        </svg>
+        <div class="card-body">
+          <h3>Pok&eacute;mon Ecosystem Simulator</h3>
+          <p>Agent-based ecological simulation with 1,000+ species across biomes. Food chains, booms, crashes, and equilibria emerge organically.</p>
+          <div class="card-foot">
+            <span class="status">closed</span>
+            <span>Agent-Based Simulation</span>
+          </div>
+        </div>
+      </a>
+
     </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3>Language Evolution Simulator</h3>
-        <span class="status">ongoing</span>
-      </div>
-      <p>
-        A genetic-algorithm simulation of language emergence from scratch: agents produce sounds and evolve communication with no prior structure. Currently achieved a fully-emergent artificial language with deterministic compositional grammar, 86% role-decoding accuracy, a ~50-word lexicon with CVC phonology, and four emergent grammatical categories (number, degree, aspect, magnitude) with evidentiality and tense.
-      </p>
-      <span class="tag">Genetic Algorithms &nbsp;&middot;&nbsp; Computational Linguistics &nbsp;&middot;&nbsp; Solo</span>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3>Voynich Decode Project</h3>
-        <span class="status">closed</span>
-      </div>
-      <p>
-        Statistical modelling of the Voynich Manuscript, a 15th-century illustrated codex written in an unknown script. Reproduced the manuscript's structural properties via a ~200-unit combinatorial generative procedure, providing statistical evidence that it is a content-free artefact and falsifying the cipher hypothesis.
-      </p>
-      <span class="tag">Statistical Analysis &nbsp;&middot;&nbsp; Computational Linguistics &nbsp;&middot;&nbsp; Solo</span>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3>Pokémon Ecosystem Simulator</h3>
-        <span class="status">closed</span>
-      </div>
-      <p>
-        An agent-based ecological simulation where 1,000+ Pokémon species are placed into a world of biomes and left to interact. Ecologically-derived traits (metabolism, reproduction, predation) computed from real game data; food chains, population booms, crashes, and equilibria emerge organically. Conceptually: Conway's Game of Life &times; Lotka&ndash;Volterra dynamics.
-      </p>
-      <span class="tag">Agent-Based Simulation &nbsp;&middot;&nbsp; Ecological Modelling &nbsp;&middot;&nbsp; Solo &nbsp;&middot;&nbsp;
-      <a href="https://jewoo-suh.github.io/pokemon-ecosystem-simulator/">Live demo</a></span>
-    </div>
-
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <a href="#" style="color:#bbb; text-decoration:none; border-bottom: 1px solid #ddd;">Download CV</a>
+    <a href="assets/jewoo-suh-cv.pdf">Download CV</a>
   </footer>
 
 </body>

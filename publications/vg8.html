@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VG8 Thesis &mdash; Jewoo Suh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Jewoo Suh</a>
+    <span>/</span>
+    Publications
+    <span>/</span>
+    VG8 Thesis
+  </div>
+
+  <h1 class="page-title">Designing the VG8: An FPGA-Based 8-bit Game Console for Comparative Analysis of 1980s Personal Computers and Game Consoles</h1>
+  <div class="pub-authors">J. Suh</div>
+  <div class="pub-venue">MMathCompSci Thesis, University of Oxford &nbsp;&middot;&nbsp; 2025</div>
+  <span class="pub-status-badge">Thesis</span>
+
+  <div class="page-body">
+
+    <h3>Overview</h3>
+
+    <p>
+      The VG8 is a custom 8-bit game console implemented on an FPGA (Field-Programmable Gate Array), designed to recreate and compare the hardware architectures of notable 1980s home computers and game consoles including the NES, the Commodore 64, the ZX Spectrum, and the Apple II. The project was the thesis for the integrated MMathCompSci degree at the University of Oxford.
+    </p>
+
+    <p>
+      Rather than emulating these systems in software, the VG8 implements their core hardware components &mdash; CPU, PPU, sound chip, memory bus &mdash; directly in Verilog, synthesised and deployed on an FPGA. This allows cycle-accurate reproduction of original hardware behaviour and enables direct architectural comparison at the register-transfer level.
+    </p>
+
+    <h3>Comparative analysis</h3>
+
+    <p>
+      The thesis uses the VG8 as an empirical platform for comparing the design decisions that separated the major 8-bit platforms. Key dimensions of comparison include: CPU architecture choices and their effect on software development patterns; graphics pipeline design and the constraints it imposed on game aesthetics; memory banking schemes and their influence on software complexity; and the tradeoffs between general-purpose computing flexibility and game-optimised hardware acceleration.
+    </p>
+
+    <p>
+      The analysis reveals that many of the aesthetic and technical characteristics that retrospectively define each platform &mdash; the NES's tile-based sprites, the C64's SID sound, the Spectrum's colour clash &mdash; were direct consequences of specific hardware economies made at design time, not aesthetic choices per se.
+    </p>
+
+    <h3>Implementation</h3>
+
+    <p>
+      The project was implemented in Verilog and targeted the Xilinx Artix-7 FPGA family. The thesis includes full RTL design documentation, timing analysis, and test suite results confirming cycle-accurate equivalence to original hardware behaviour on a set of test ROMs.
+    </p>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voynich Decode Project &mdash; Jewoo Suh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Jewoo Suh</a>
+    <span>/</span>
+    Projects
+    <span>/</span>
+    Voynich Decode Project
+  </div>
+
+  <h1 class="page-title">Voynich Decode Project</h1>
+  <div class="page-meta">Closed &nbsp;&middot;&nbsp; Solo &nbsp;&middot;&nbsp; Statistical Analysis &nbsp;&middot;&nbsp; Computational Linguistics</div>
+
+  <img class="page-hero" src="../assets/img/voynich-thumb.png" alt="Ridge plot comparing Voynichese character distributions to natural languages and controls" />
+
+  <div class="page-body">
+
+    <p>
+      The Voynich Manuscript is a 15th-century illustrated codex written entirely in an unknown script. It has resisted decipherment for over a century. The leading hypotheses divide broadly into two camps: either the text encodes a natural or constructed language (the cipher hypothesis), or it is a deliberate fabrication with no semantic content.
+    </p>
+
+    <h3>Approach</h3>
+
+    <p>
+      Rather than attempting decipherment, this project approached the manuscript statistically: if the cipher hypothesis is correct, the text should behave like a language under pressure. Natural languages, and even well-designed ciphers of natural language, exhibit specific statistical signatures at the character, word, and structural levels: Zipf-like rank-frequency distributions, bounded entropy profiles, morphological regularities, and cross-section consistency.
+    </p>
+
+    <p>
+      The project reproduced the structural properties of Voynichese &mdash; its character distributions, word-length profiles, positional constraints on glyphs, and inter-word entropy &mdash; via a combinatorial generative procedure of approximately 200 units. The procedure is purely mechanical: it draws from a small inventory of glyph templates and applies a set of positional rules without reference to any semantic content.
+    </p>
+
+    <h3>Findings</h3>
+
+    <p>
+      The generated text matches the Voynich Manuscript across all tested statistical dimensions. This demonstrates that every measured property of the manuscript is consistent with a content-free generative process. It does not require a language, a cipher, or any underlying meaning.
+    </p>
+
+    <p>
+      The ridge plot above shows the comparison of Voynichese character-level distributions against a range of natural languages and constructed controls. Voynichese clusters with the synthetic controls rather than with natural languages, which supports the content-free interpretation.
+    </p>
+
+    <p>
+      The cipher hypothesis predicts structure that is not there. The project concludes that the Voynich Manuscript is most parsimoniously explained as a content-free artefact produced by a procedure like the one reconstructed here, falsifying the cipher hypothesis at the statistical level.
+    </p>
+
+    <h3>Status</h3>
+
+    <p>
+      The project is closed. The analysis reached a conclusion; further work would require either new manuscript data or a different framing of the question.
+    </p>
+
+  </div>
+
+  <div class="page-tags">Statistical Analysis &nbsp;&middot;&nbsp; Computational Linguistics &nbsp;&middot;&nbsp; Historical Manuscripts &nbsp;&middot;&nbsp; Solo</div>
+
+</body>
+</html>

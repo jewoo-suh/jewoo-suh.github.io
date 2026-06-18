@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language Evolution Simulator &mdash; Jewoo Suh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Jewoo Suh</a>
+    <span>/</span>
+    Projects
+    <span>/</span>
+    Language Evolution Simulator
+  </div>
+
+  <h1 class="page-title">Language Evolution Simulator</h1>
+  <div class="page-meta">Ongoing &nbsp;&middot;&nbsp; Solo &nbsp;&middot;&nbsp; Genetic Algorithms &nbsp;&middot;&nbsp; Computational Linguistics</div>
+
+  <img class="page-hero" src="../assets/img/lang-evo-thumb.png" alt="Simulation snapshot showing biome map with coloured agent dots" />
+
+  <div class="page-body">
+
+    <p>
+      A genetic-algorithm simulation of language emergence from scratch. Agents are placed in a world with no pre-designed phonology, no vocabulary, and no grammar. They produce arbitrary sounds and are selected by how well they communicate goal-relevant information to other agents. Over thousands of generations, structure emerges.
+    </p>
+
+    <h3>What has emerged</h3>
+
+    <p>
+      The current simulation has produced a fully emergent artificial language with deterministic compositional grammar. Agents achieve 86% role-decoding accuracy across communicative scenarios. The lexicon contains approximately 50 words organised around CVC (consonant-vowel-consonant) phonological templates that emerged without any phonological bias being specified.
+    </p>
+
+    <p>
+      Four grammatical categories have appeared spontaneously: number, degree, aspect, and magnitude. Beyond these, the language has developed evidentiality marking (how the speaker knows something) and tense, both of which are cross-linguistically widespread in natural languages but were entirely absent from the simulation's initial conditions.
+    </p>
+
+    <h3>Design</h3>
+
+    <p>
+      The simulation runs in discrete generations. Each agent has a genome encoding production biases and a perceptual decoder. Fitness is evaluated on communicative success in paired tasks: one agent observes a scene and must transmit enough information for a partner to act correctly. Agents with higher success rates reproduce with higher probability; offspring inherit genomes with mutation. There is no teacher, no target language, and no reward signal specifying what grammar should look like.
+    </p>
+
+    <p>
+      The compositional structure in the resulting grammar was not designed in. It is a convergent solution: compositionality reduces the memory load required to communicate a large number of distinct situations, so it tends to be selected for when the communicative space is large enough.
+    </p>
+
+    <h3>Status</h3>
+
+    <p>
+      The simulation is ongoing. Current work focuses on scaling the scenario space to test whether the existing grammatical categories generalise or fragment under pressure from a richer communicative environment, and on characterising the transition from holistic to compositional signalling more precisely.
+    </p>
+
+  </div>
+
+  <div class="page-tags">Genetic Algorithms &nbsp;&middot;&nbsp; Computational Linguistics &nbsp;&middot;&nbsp; Language Emergence &nbsp;&middot;&nbsp; Solo</div>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pok&eacute;mon Ecosystem Simulator &mdash; Jewoo Suh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Jewoo Suh</a>
+    <span>/</span>
+    Projects
+    <span>/</span>
+    Pok&eacute;mon Ecosystem Simulator
+  </div>
+
+  <h1 class="page-title">Pok&eacute;mon Ecosystem Simulator</h1>
+  <div class="page-meta">Closed &nbsp;&middot;&nbsp; Solo &nbsp;&middot;&nbsp; Agent-Based Simulation &nbsp;&middot;&nbsp; Ecological Modelling</div>
+
+  <!-- Larger version of the biome SVG -->
+  <svg class="page-hero-svg" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0"   y="0"   width="170" height="170" fill="#b0cc9a"/>
+    <rect x="170" y="0"   width="170" height="120" fill="#e8d898"/>
+    <rect x="340" y="0"   width="170" height="170" fill="#9abcd4"/>
+    <rect x="510" y="0"   width="170" height="170" fill="#c4b49a"/>
+    <rect x="0"   y="170" width="200" height="170" fill="#d4bc9a"/>
+    <rect x="200" y="120" width="160" height="220" fill="#c0d4a8"/>
+    <rect x="360" y="170" width="170" height="170" fill="#a8bcd4"/>
+    <rect x="530" y="170" width="150" height="170" fill="#d0bca8"/>
+    <!-- subtle grid overlay -->
+    <rect width="680" height="340" fill="rgba(255,255,255,0.12)"/>
+    <!-- agents — more of them for the bigger canvas -->
+    <circle cx="40"  cy="35"  r="4.5" fill="#e05555" opacity="0.9"/>
+    <circle cx="80"  cy="70"  r="3.5" fill="#e07730" opacity="0.9"/>
+    <circle cx="25"  cy="100" r="4"   fill="#e05555" opacity="0.9"/>
+    <circle cx="120" cy="42"  r="3"   fill="#884488" opacity="0.9"/>
+    <circle cx="150" cy="80"  r="3.5" fill="#e07730" opacity="0.9"/>
+    <circle cx="60"  cy="140" r="4"   fill="#33aa66" opacity="0.9"/>
+    <circle cx="110" cy="120" r="3"   fill="#3388cc" opacity="0.9"/>
+    <circle cx="200" cy="30"  r="4"   fill="#e0c030" opacity="0.9"/>
+    <circle cx="250" cy="65"  r="3"   fill="#e07730" opacity="0.9"/>
+    <circle cx="290" cy="95"  r="3.5" fill="#e0c030" opacity="0.9"/>
+    <circle cx="220" cy="100" r="2.5" fill="#cc4444" opacity="0.9"/>
+    <circle cx="380" cy="25"  r="4"   fill="#3388cc" opacity="0.9"/>
+    <circle cx="430" cy="70"  r="3.5" fill="#3388cc" opacity="0.9"/>
+    <circle cx="460" cy="120" r="3"   fill="#33aa66" opacity="0.9"/>
+    <circle cx="390" cy="100" r="2.5" fill="#5566cc" opacity="0.9"/>
+    <circle cx="545" cy="40"  r="4"   fill="#cc4444" opacity="0.9"/>
+    <circle cx="590" cy="85"  r="3.5" fill="#884488" opacity="0.9"/>
+    <circle cx="620" cy="140" r="3"   fill="#cc4444" opacity="0.9"/>
+    <circle cx="555" cy="110" r="3"   fill="#e05555" opacity="0.9"/>
+    <circle cx="50"  cy="200" r="3.5" fill="#e07730" opacity="0.9"/>
+    <circle cx="110" cy="240" r="4"   fill="#33aa66" opacity="0.9"/>
+    <circle cx="160" cy="280" r="3"   fill="#e05555" opacity="0.9"/>
+    <circle cx="80"  cy="310" r="3.5" fill="#884488" opacity="0.9"/>
+    <circle cx="250" cy="180" r="4"   fill="#3388cc" opacity="0.9"/>
+    <circle cx="290" cy="240" r="3"   fill="#884488" opacity="0.9"/>
+    <circle cx="320" cy="300" r="3.5" fill="#e0c030" opacity="0.9"/>
+    <circle cx="230" cy="290" r="3"   fill="#33aa66" opacity="0.9"/>
+    <circle cx="400" cy="210" r="4"   fill="#cc4444" opacity="0.9"/>
+    <circle cx="460" cy="270" r="3.5" fill="#33aa66" opacity="0.9"/>
+    <circle cx="500" cy="320" r="3"   fill="#e07730" opacity="0.9"/>
+    <circle cx="420" cy="310" r="3.5" fill="#5566cc" opacity="0.9"/>
+    <circle cx="570" cy="220" r="4"   fill="#e05555" opacity="0.9"/>
+    <circle cx="620" cy="280" r="3"   fill="#3388cc" opacity="0.9"/>
+    <circle cx="645" cy="310" r="3.5" fill="#884488" opacity="0.9"/>
+    <circle cx="600" cy="185" r="3"   fill="#e0c030" opacity="0.9"/>
+    <!-- biome labels -->
+    <text x="85"  y="162" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Forest</text>
+    <text x="255" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Desert</text>
+    <text x="425" y="162" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Ocean</text>
+    <text x="595" y="162" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Plains</text>
+    <text x="100" y="332" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Savanna</text>
+    <text x="280" y="332" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Grassland</text>
+    <text x="445" y="332" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Tundra</text>
+    <text x="605" y="332" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Badlands</text>
+  </svg>
+
+  <div class="page-body">
+
+    <p>
+      An agent-based ecological simulation where over 1,000 Pok&eacute;mon species are placed into a world of biomes and left to interact with no external direction. The simulation is conceptually Conway's Game of Life multiplied by Lotka&ndash;Volterra dynamics: simple local rules produce complex global behaviour.
+    </p>
+
+    <h3>Design</h3>
+
+    <p>
+      Every species' ecological traits &mdash; metabolism rate, reproductive strategy, predation targets, habitat preferences, movement speed &mdash; are derived computationally from the official game data. The simulation does not use the game's battle mechanics; instead, it extracts the underlying biological logic implied by each species' stats and type interactions and translates it into ecological parameters. A fast Pok&eacute;mon with high attack and a carnivore typing becomes a predator; a slow, high-defence species with a plant typing becomes prey.
+    </p>
+
+    <p>
+      The world is divided into biomes that each species can inhabit with varying degrees of suitability. Species placed outside their preferred biome suffer metabolic penalties; those in their native biome thrive. Food chains, territorial competition, and reproductive dynamics all follow from these parameters without any scripting of specific interactions.
+    </p>
+
+    <h3>What emerges</h3>
+
+    <p>
+      Given a random starting distribution, the simulation consistently produces population booms and crashes characteristic of predator-prey cycles, followed by long periods of relative equilibrium. Some species go extinct; dominant predators occasionally collapse their own food supply and crash shortly after. Invasive species introduced into a stable ecosystem can trigger cascading extinctions.
+    </p>
+
+    <p>
+      None of this is programmed explicitly. It is an emergent consequence of the interaction between species-level parameters and the shared environment.
+    </p>
+
+    <a class="page-link" href="https://jewoo-suh.github.io/pokemon-ecosystem-simulator/" target="_blank" rel="noopener">Live demo &rarr;</a>
+
+    <h3>Status</h3>
+
+    <p>
+      The project is closed. The simulation runs as a live demo at the link above.
+    </p>
+
+  </div>
+
+  <div class="page-tags">Agent-Based Simulation &nbsp;&middot;&nbsp; Ecological Modelling &nbsp;&middot;&nbsp; Emergent Behaviour &nbsp;&middot;&nbsp; Solo</div>
+
+</body>
+</html>

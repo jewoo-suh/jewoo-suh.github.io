@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iterated Self-Evaluation Impossibility &mdash; Jewoo Suh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Jewoo Suh</a>
+    <span>/</span>
+    Publications
+    <span>/</span>
+    Iterated Self-Evaluation Impossibility
+  </div>
+
+  <h1 class="page-title">Iterated Self-Evaluation Impossibility for Large Language Models</h1>
+  <div class="pub-authors">J. Suh et al.</div>
+  <div class="pub-venue">IEEE Access &nbsp;&middot;&nbsp; 2026</div>
+  <span class="pub-status-badge">In preparation</span>
+
+  <div class="page-body">
+
+    <h3>Overview</h3>
+
+    <p>
+      Self-evaluation &mdash; having a model assess the quality of its own outputs &mdash; has become a widespread technique in LLM alignment and RLHF pipelines. This paper investigates the theoretical limits of iterated self-evaluation: what happens when a model evaluates its own evaluations, repeatedly, without external grounding?
+    </p>
+
+    <p>
+      The paper establishes formal impossibility results for a class of iterated self-evaluation procedures. Under mild assumptions about the model's evaluation function, the sequence of self-assessments either converges to a fixed point that is independent of the original output quality, or diverges. In neither case does iterated self-evaluation provide reliable information about ground truth.
+    </p>
+
+    <h3>Significance</h3>
+
+    <p>
+      The results have direct implications for any alignment or evaluation pipeline that relies on a model judging itself without external reference. Constitutional AI variants, self-refinement loops, and model-graded evaluation frameworks are all subject to the impossibility conditions derived here. The paper characterises which evaluation architectures escape the impossibility and which do not.
+    </p>
+
+  </div>
+
+</body>
+</html>
