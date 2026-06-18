@@ -124,34 +124,30 @@ a.card:hover {
 /* --- PUBLICATION CARD HEADER --- */
 .card-pub-head {
   width: 100%;
-  aspect-ratio: 5 / 2;
-  background: #f7f7f5;
+  height: 62px;
+  background: #f6f6f4;
+  border-bottom: 1px solid #ebebea;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 12px 15px;
-  position: relative;
-  overflow: hidden;
+  align-items: center;
+  gap: 12px;
+  padding: 0 15px;
 }
 .card-pub-head .pub-num {
-  position: absolute;
-  top: -8px;
-  right: 8px;
-  font-size: 4rem;
+  font-size: 1.35rem;
   font-weight: 600;
-  color: #e8e8e4;
-  line-height: 1;
+  color: #c8c8c4;
   font-family: 'Source Serif 4', Georgia, serif;
-  letter-spacing: -0.03em;
-  user-select: none;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+  line-height: 1;
 }
 .card-pub-head .pub-venue-tag {
-  font-size: 0.68rem;
+  font-size: 0.67rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #aaa;
+  line-height: 1.45;
 }
 
 /* --- INNER PAGE CONTENT --- */
