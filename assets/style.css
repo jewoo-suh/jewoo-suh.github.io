@@ -121,22 +121,38 @@ a.card:hover {
 }
 .card-foot .status { font-style: italic; }
 
-/* --- PUBLICATION LIST (index) --- */
-.pub-list { list-style: none; }
-.pub-list li {
-  margin-bottom: 14px;
-  font-size: 0.9rem;
-  padding-left: 2em;
-  text-indent: -2em;
+/* --- PUBLICATION CARD HEADER --- */
+.card-pub-head {
+  width: 100%;
+  aspect-ratio: 5 / 2;
+  background: #f7f7f5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 12px 15px;
+  position: relative;
+  overflow: hidden;
 }
-.pub-list a.pub-title {
-  font-style: italic;
-  color: #111;
-  text-decoration: none;
-  border-bottom: 1px solid #ddd;
+.card-pub-head .pub-num {
+  position: absolute;
+  top: -8px;
+  right: 8px;
+  font-size: 4rem;
+  font-weight: 600;
+  color: #e8e8e4;
+  line-height: 1;
+  font-family: 'Source Serif 4', Georgia, serif;
+  letter-spacing: -0.03em;
+  user-select: none;
 }
-.pub-list a.pub-title:hover { border-color: #111; }
-.pub-list .pub-meta { color: #666; font-size: 0.82rem; }
+.card-pub-head .pub-venue-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #aaa;
+}
 
 /* --- INNER PAGE CONTENT --- */
 .page-hero {
