@@ -19,135 +19,168 @@ body {
   color: #aaa;
   margin-bottom: 44px;
 }
-.breadcrumb a {
-  color: #aaa;
-  text-decoration: none;
-  border-bottom: 1px solid #e0e0e0;
-}
+.breadcrumb a { color: #aaa; text-decoration: none; border-bottom: 1px solid #e0e0e0; }
 .breadcrumb a:hover { color: #111; border-color: #111; }
 .breadcrumb span { margin: 0 6px; }
 
-/* --- HEADER (index only) --- */
-header { margin-bottom: 48px; }
-header h1 { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 4px; }
-header .contact { font-size: 0.85rem; color: #555; }
-header .contact a { color: #555; text-decoration: none; border-bottom: 1px solid #ccc; }
-header .contact a:hover { color: #111; border-color: #111; }
-header .interests { margin-top: 12px; font-size: 0.88rem; color: #333; font-style: italic; }
+/* --- HEADER --- */
+header { margin-bottom: 52px; }
+
+.header-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.header-photo {
+  width: 92px;
+  height: 92px;
+  flex-shrink: 0;
+  background: #f0f0ee;
+  border: 1px solid #dededc;
+}
+
+.header-text { flex: 1; padding-top: 2px; }
+.header-text h1 { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 5px; }
+.header-text .contact { font-size: 0.85rem; color: #555; }
+.header-text .contact a { color: #555; text-decoration: none; border-bottom: 1px solid #ccc; }
+.header-text .contact a:hover { color: #111; border-color: #111; }
+.header-text .interests { margin-top: 10px; font-size: 0.86rem; color: #555; font-style: italic; line-height: 1.6; }
+
+@media (max-width: 460px) {
+  .header-inner { flex-direction: column; gap: 18px; }
+  .header-photo { width: 72px; height: 72px; }
+}
 
 /* --- INNER PAGE HEADER --- */
-.page-name {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-bottom: 44px;
-}
-.page-name a {
-  color: #111;
-  text-decoration: none;
-  border-bottom: 1px solid #e0e0e0;
-}
+.page-name { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 44px; }
+.page-name a { color: #111; text-decoration: none; border-bottom: 1px solid #e0e0e0; }
 .page-name a:hover { border-color: #111; }
 
 /* --- SECTIONS --- */
-section { margin-bottom: 44px; }
+section { margin-bottom: 52px; }
 section h2 {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: #888;
-  border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 6px;
-  margin-bottom: 20px;
+  color: #999;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 7px;
+  margin-bottom: 24px;
 }
 
-/* --- PROJECT CARDS --- */
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* --- ABOUT --- */
+.about-text p {
+  font-size: 0.92rem;
+  line-height: 1.72;
+  color: #222;
+  margin-bottom: 14px;
+}
+.about-text p:last-child { margin-bottom: 0; }
+
+/* --- PUBLICATION LIST (index) --- */
+.pub-list { list-style: none; }
+.pub-list li {
+  display: flex;
   gap: 18px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #f0f0ee;
 }
-@media (max-width: 480px) {
-  .card-grid { grid-template-columns: 1fr; }
+.pub-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.pub-list .pub-num {
+  font-size: 0.7rem;
+  color: #ccc;
+  font-weight: 600;
+  padding-top: 3px;
+  flex-shrink: 0;
+  width: 18px;
+  letter-spacing: 0.02em;
+}
+.pub-list .pub-content { flex: 1; }
+.pub-list a.pub-title {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.55;
+}
+.pub-list a.pub-title:hover { border-color: #111; }
+.pub-list .pub-byline {
+  font-size: 0.78rem;
+  color: #999;
+  margin-top: 4px;
+}
+.pub-list .pub-desc {
+  font-size: 0.82rem;
+  color: #555;
+  margin-top: 5px;
+  line-height: 1.55;
 }
 
-a.card {
+/* --- PROJECT ROWS (index) --- */
+.project-list { display: flex; flex-direction: column; }
+
+a.project-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
   text-decoration: none;
   color: inherit;
-  display: block;
-  border: 1px solid #e8e8e8;
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  padding: 22px 0;
+  border-bottom: 1px solid #f0f0ee;
+  transition: opacity 0.12s;
 }
-a.card:hover {
-  box-shadow: 0 3px 14px rgba(0,0,0,0.07);
-  border-color: #ccc;
-}
+a.project-row:first-child { padding-top: 0; }
+a.project-row:last-child { border-bottom: none; }
+a.project-row:hover { opacity: 0.82; }
 
-.card-thumb {
-  width: 100%;
-  aspect-ratio: 16 / 9;
+.project-thumb {
+  width: 200px;
+  flex-shrink: 0;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  display: block;
-  background: #f5f5f5;
-}
-
-.card-thumb-svg {
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  border: 1px solid #eee;
   display: block;
 }
 
-.card-body {
-  padding: 13px 15px 14px;
-}
-.card-body h3 {
-  font-size: 0.88rem;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-.card-body p {
-  font-size: 0.8rem;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 8px;
-}
-.card-foot {
+.project-text { flex: 1; padding-top: 2px; }
+
+.project-row-head {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  font-size: 0.74rem;
-  color: #aaa;
+  align-items: baseline;
+  margin-bottom: 8px;
 }
-.card-foot .status { font-style: italic; }
-
-/* --- PUBLICATION CARD HEADER --- */
-.card-pub-head {
-  width: 100%;
-  height: 62px;
-  background: #f6f6f4;
-  border-bottom: 1px solid #ebebea;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0 15px;
-}
-.card-pub-head .pub-num {
-  font-size: 1.35rem;
+.project-row-head h3 {
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #c8c8c4;
-  font-family: 'Source Serif 4', Georgia, serif;
-  letter-spacing: -0.02em;
+}
+.project-row-head .status {
+  font-size: 0.76rem;
+  color: #bbb;
+  font-style: italic;
   flex-shrink: 0;
-  line-height: 1;
+  margin-left: 12px;
 }
-.card-pub-head .pub-venue-tag {
-  font-size: 0.67rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #aaa;
-  line-height: 1.45;
+.project-text p {
+  font-size: 0.86rem;
+  color: #444;
+  line-height: 1.62;
+  margin-bottom: 10px;
+}
+.project-text .tag {
+  font-size: 0.74rem;
+  color: #bbb;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 500px) {
+  a.project-row { flex-direction: column; }
+  .project-thumb { width: 100%; }
 }
 
 /* --- INNER PAGE CONTENT --- */

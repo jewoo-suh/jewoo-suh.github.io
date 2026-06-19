@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <rect width="400" height="300" fill="#f8f8f6"/>
+  <line x1="200" y1="150" x2="90"  y2="70"  stroke="#c4c4bc" stroke-width="1.3"/>
+  <line x1="200" y1="150" x2="310" y2="70"  stroke="#c4c4bc" stroke-width="1.3"/>
+  <line x1="200" y1="150" x2="70"  y2="230" stroke="#c4c4bc" stroke-width="1.3"/>
+  <line x1="200" y1="150" x2="330" y2="235" stroke="#c4c4bc" stroke-width="1.3"/>
+  <line x1="200" y1="150" x2="200" y2="265" stroke="#c4c4bc" stroke-width="1.3"/>
+  <line x1="90"  y1="70"  x2="45"  y2="40"  stroke="#d8d8d0" stroke-width="0.9"/>
+  <line x1="90"  y1="70"  x2="110" y2="28"  stroke="#d8d8d0" stroke-width="0.9"/>
+  <line x1="90"  y1="70"  x2="50"  y2="105" stroke="#d8d8d0" stroke-width="0.9"/>
+  <line x1="310" y1="70"  x2="355" y2="40"  stroke="#d8d8d0" stroke-width="0.9"/>
+  <line x1="310" y1="70"  x2="290" y2="28"  stroke="#d8d8d0" stroke-width="0.9"/>
+  <line x1="310" y1="70"  x2="350" y2="108" stroke="#d8d8d0" stroke-width="0.9"/>
+  <line x1="70"  y1="230" x2="35"  y2="260" stroke="#d8d8d0" stroke-width="0.9"/>
+  <line x1="70"  y1="230" x2="48"  y2="198" stroke="#d8d8d0" stroke-width="0.9"/>
+  <line x1="330" y1="235" x2="365" y2="262" stroke="#d8d8d0" stroke-width="0.9"/>
+  <line x1="330" y1="235" x2="355" y2="205" stroke="#d8d8d0" stroke-width="0.9"/>
+  <line x1="90"  y1="70"  x2="70"  y2="230" stroke="#b0b0a8" stroke-width="0.9" stroke-dasharray="5 4"/>
+  <line x1="310" y1="70"  x2="330" y2="235" stroke="#b0b0a8" stroke-width="0.9" stroke-dasharray="5 4"/>
+  <line x1="90"  y1="70"  x2="310" y2="70"  stroke="#b0b0a8" stroke-width="0.9" stroke-dasharray="5 4"/>
+  <line x1="70"  y1="230" x2="330" y2="235" stroke="#b0b0a8" stroke-width="0.9" stroke-dasharray="5 4"/>
+  <circle cx="200" cy="150" r="11"  fill="#555"/>
+  <circle cx="90"  cy="70"  r="7"   fill="#888"/>
+  <circle cx="310" cy="70"  r="7"   fill="#888"/>
+  <circle cx="70"  cy="230" r="7"   fill="#888"/>
+  <circle cx="330" cy="235" r="7"   fill="#888"/>
+  <circle cx="200" cy="265" r="5.5" fill="#999"/>
+  <circle cx="45"  cy="40"  r="4"   fill="#aaa"/>
+  <circle cx="110" cy="28"  r="4"   fill="#aaa"/>
+  <circle cx="50"  cy="105" r="4"   fill="#aaa"/>
+  <circle cx="355" cy="40"  r="4"   fill="#aaa"/>
+  <circle cx="290" cy="28"  r="4"   fill="#aaa"/>
+  <circle cx="350" cy="108" r="4"   fill="#aaa"/>
+  <circle cx="35"  cy="260" r="3"   fill="#bbb"/>
+  <circle cx="48"  cy="198" r="3"   fill="#bbb"/>
+  <circle cx="365" cy="262" r="3"   fill="#bbb"/>
+  <circle cx="355" cy="205" r="3"   fill="#bbb"/>
+</svg>
