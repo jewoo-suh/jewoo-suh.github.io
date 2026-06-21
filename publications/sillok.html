@@ -20,33 +20,16 @@
 
   <h1 class="page-title"><code>.sillok</code>: A Korean-Specific Lossless Text Encoding Format for Linguistically-Informed Compression and Long-Term Archival</h1>
   <div class="pub-authors">J. Suh</div>
-  <div class="pub-venue">Preprint &nbsp;&middot;&nbsp; 2026</div>
-  <span class="pub-status-badge">Preprint</span>
+  <div class="pub-venue">Preprint, 2026</div>
 
   <div class="page-body">
-
-    <h3>Overview</h3>
-
     <p>
-      Korean text is conventionally stored in Unicode (UTF-8 or UTF-16), encoding each Hangul syllable block as a single code point. This is a reasonable general-purpose encoding, but it discards the internal phonological structure of each syllable: a Hangul block is composed of an initial consonant (<i>choseong</i>), a vowel (<i>jungseong</i>), and an optional final consonant (<i>jongseong</i>). Treating the block as atomic means that compression schemes cannot exploit this sub-syllable regularity.
+      Unicode encodes each Hangul syllable block as a single code point, discarding its internal structure: every block is composed of an initial consonant, a vowel, and an optional final consonant. <code>.sillok</code> represents text at the jamo (phoneme) level instead, applying compression priors derived from Korean phonotactics and morphology. Not all jamo combinations are legal; the distribution of legal ones is highly skewed. A linguistically-informed model over jamo sequences compresses significantly better than a general-purpose byte-level model, while remaining fully lossless.
     </p>
-
     <p>
-      <code>.sillok</code> is a lossless encoding format designed around Korean's actual phonological structure. It represents text at the jamo (phoneme) level, applying linguistically-motivated compression priors based on Korean phonotactics and morphology. The result is a format that achieves better compression ratios than UTF-8 on Korean text whilst remaining fully lossless and designed for long-term archival stability.
+      Named after the <i>Joseon Wangjo Sillok</i> &mdash; a centuries-long Korean archival project that prioritised fidelity above all else. The format shares the same design priorities: reproducibility, longevity, and self-describing decodability.
     </p>
-
-    <h3>Design principles</h3>
-
-    <p>
-      The format takes its name from the <i>Joseon Wangjo Sillok</i> (Annals of the Joseon Dynasty), a centuries-long archival project that prioritised longevity and fidelity above all else. The encoding is designed with the same priorities: reproducibility, independence from any particular software ecosystem, and the ability to decode correctly without access to format documentation beyond the specification itself.
-    </p>
-
-    <p>
-      The compression model exploits the highly constrained phonotactics of Korean: not all jamo combinations are legal, and the distribution of legal combinations is highly skewed. A linguistically-informed model over jamo sequences compresses significantly more efficiently than a general-purpose byte-level model.
-    </p>
-
     <a class="page-link" href="https://jewoo-suh.github.io/modern-sillok/sillok_paper.pdf" target="_blank" rel="noopener">PDF &rarr;</a>
-
   </div>
 
 </body>

@@ -21,7 +21,6 @@
   <h1 class="page-title">Pok&eacute;mon Ecosystem Simulator</h1>
   <div class="page-meta">Closed &nbsp;&middot;&nbsp; Solo &nbsp;&middot;&nbsp; Agent-Based Simulation &nbsp;&middot;&nbsp; Ecological Modelling</div>
 
-  <!-- Larger version of the biome SVG -->
   <svg class="page-hero-svg" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg">
     <rect x="0"   y="0"   width="170" height="170" fill="#b0cc9a"/>
     <rect x="170" y="0"   width="170" height="120" fill="#e8d898"/>
@@ -31,9 +30,7 @@
     <rect x="200" y="120" width="160" height="220" fill="#c0d4a8"/>
     <rect x="360" y="170" width="170" height="170" fill="#a8bcd4"/>
     <rect x="530" y="170" width="150" height="170" fill="#d0bca8"/>
-    <!-- subtle grid overlay -->
     <rect width="680" height="340" fill="rgba(255,255,255,0.12)"/>
-    <!-- agents — more of them for the bigger canvas -->
     <circle cx="40"  cy="35"  r="4.5" fill="#e05555" opacity="0.9"/>
     <circle cx="80"  cy="70"  r="3.5" fill="#e07730" opacity="0.9"/>
     <circle cx="25"  cy="100" r="4"   fill="#e05555" opacity="0.9"/>
@@ -69,50 +66,19 @@
     <circle cx="620" cy="280" r="3"   fill="#3388cc" opacity="0.9"/>
     <circle cx="645" cy="310" r="3.5" fill="#884488" opacity="0.9"/>
     <circle cx="600" cy="185" r="3"   fill="#e0c030" opacity="0.9"/>
-    <!-- biome labels -->
-    <text x="85"  y="162" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Forest</text>
-    <text x="255" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Desert</text>
-    <text x="425" y="162" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Ocean</text>
-    <text x="595" y="162" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Plains</text>
-    <text x="100" y="332" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Savanna</text>
-    <text x="280" y="332" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Grassland</text>
-    <text x="445" y="332" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Tundra</text>
-    <text x="605" y="332" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666" opacity="0.7">Badlands</text>
   </svg>
 
   <div class="page-body">
 
     <p>
-      An agent-based ecological simulation where over 1,000 Pok&eacute;mon species are placed into a world of biomes and left to interact with no external direction. The simulation is conceptually Conway's Game of Life multiplied by Lotka&ndash;Volterra dynamics: simple local rules produce complex global behaviour.
-    </p>
-
-    <h3>Design</h3>
-
-    <p>
-      Every species' ecological traits &mdash; metabolism rate, reproductive strategy, predation targets, habitat preferences, movement speed &mdash; are derived computationally from the official game data. The simulation does not use the game's battle mechanics; instead, it extracts the underlying biological logic implied by each species' stats and type interactions and translates it into ecological parameters. A fast Pok&eacute;mon with high attack and a carnivore typing becomes a predator; a slow, high-defence species with a plant typing becomes prey.
+      1,025 Pok&eacute;mon species, a world of biomes, and traits derived from actual game data &mdash; then left to run. Metabolism, reproduction rate, predation targets, habitat preference: all computed from the game&rsquo;s stats and type system rather than made up. A fast Pok&eacute;mon with high Attack and a carnivore typing becomes a predator. A slow, high-Defence grass type becomes prey.
     </p>
 
     <p>
-      The world is divided into biomes that each species can inhabit with varying degrees of suitability. Species placed outside their preferred biome suffer metabolic penalties; those in their native biome thrive. Food chains, territorial competition, and reproductive dynamics all follow from these parameters without any scripting of specific interactions.
-    </p>
-
-    <h3>What emerges</h3>
-
-    <p>
-      Given a random starting distribution, the simulation consistently produces population booms and crashes characteristic of predator-prey cycles, followed by long periods of relative equilibrium. Some species go extinct; dominant predators occasionally collapse their own food supply and crash shortly after. Invasive species introduced into a stable ecosystem can trigger cascading extinctions.
-    </p>
-
-    <p>
-      None of this is programmed explicitly. It is an emergent consequence of the interaction between species-level parameters and the shared environment.
+      No interactions are scripted. Food chains, population booms, territorial collapses, and long-run equilibria emerge from the numbers alone. The interesting part: dominant predators occasionally grow their population so large they consume their own food supply and crash shortly after. Invasive species introduced into a stable ecosystem trigger cascading extinctions. None of this is programmed &mdash; it follows from the parameter interactions.
     </p>
 
     <a class="page-link" href="https://jewoo-suh.github.io/pokemon-ecosystem-simulator/" target="_blank" rel="noopener">Live demo &rarr;</a>
-
-    <h3>Status</h3>
-
-    <p>
-      The project is closed. The simulation runs as a live demo at the link above.
-    </p>
 
   </div>
 
