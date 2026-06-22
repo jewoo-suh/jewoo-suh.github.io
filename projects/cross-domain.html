@@ -75,16 +75,58 @@
   <div class="page-body">
 
     <p>
-      Inspired by Don Swanson and literature-based discovery, I am researching the classification of knowledge: how unrelated research questions might be connected to answers that already exist somewhere else in the literature. Swanson showed in the 1980s that published papers in completely separate fields, never citing each other, could be chained together to produce real, testable hypotheses. He did it by hand, two hops at a time.
+      Inspired by Don Swanson and literature-based discovery, I am researching the classification of knowledge and how unrelated research questions might be connected to answers that already exist somewhere else in the literature. Swanson has already showed in the 1980s that published papers in completely separate fields, never citing each other, could be chained together to produce real, testable hypotheses.
     </p>
 
     <p>
-      Part of what drew me in was watching GPT resolve supposedly-open <a href="https://www.erdosproblems.com/">Erdős problems</a>, not by proving anything new, but by surfacing solutions already published in the literature that nobody had connected to the question. The answers were out there; the gap was nobody had read both halves.
+      Another part of what drew me in was watching GPT resolve supposedly-open <a href="https://www.erdosproblems.com/">Erdős problems</a>, not by proving anything new, but by surfacing solutions already published in the literature that nobody had connected to the question.
     </p>
 
     <p>
       The project asks whether knowledge can be classified systematically, and whether those classifications can reveal connections we would otherwise miss. Ongoing; architectural details are private.
     </p>
+
+    <div class="example-box">
+      <div class="example-label">Example connection</div>
+      <svg viewBox="0 0 640 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tardigrade Dsup protein connected to radiotherapy through hydroxyl-radical DNA damage">
+
+        <!-- domain tags -->
+        <text x="110" y="74" text-anchor="middle" font-family="Georgia, serif" font-size="10" letter-spacing="1" fill="#aaa">MARINE BIOLOGY</text>
+        <text x="320" y="74" text-anchor="middle" font-family="Georgia, serif" font-size="10" letter-spacing="1" fill="#aaa">SHARED MECHANISM</text>
+        <text x="530" y="74" text-anchor="middle" font-family="Georgia, serif" font-size="10" letter-spacing="1" fill="#aaa">RADIATION ONCOLOGY</text>
+
+        <!-- known links -->
+        <line x1="200" y1="110" x2="240" y2="110" stroke="#bbb" stroke-width="1.2"/>
+        <line x1="400" y1="110" x2="440" y2="110" stroke="#bbb" stroke-width="1.2"/>
+
+        <!-- inferred arc A to C -->
+        <path d="M 110 88 Q 320 18 530 88" fill="none" stroke="#4a7a6a" stroke-width="1.3" stroke-dasharray="5 4"/>
+        <text x="320" y="34" text-anchor="middle" font-family="Georgia, serif" font-size="10.5" font-style="italic" fill="#4a7a6a">inferred connection (no paper links them)</text>
+
+        <!-- node A -->
+        <rect x="20" y="90" width="180" height="42" rx="3" fill="#fff" stroke="#ccc"/>
+        <text x="110" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="12.5" fill="#222">Tardigrade Dsup</text>
+        <text x="110" y="123" text-anchor="middle" font-family="Georgia, serif" font-size="12.5" fill="#222">protein</text>
+
+        <!-- node B -->
+        <rect x="240" y="90" width="160" height="42" rx="3" fill="#f2f4f3" stroke="#cdd6d2"/>
+        <text x="320" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#3a4a44">Hydroxyl-radical</text>
+        <text x="320" y="123" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#3a4a44">DNA damage</text>
+
+        <!-- node C -->
+        <rect x="440" y="90" width="180" height="42" rx="3" fill="#fff" stroke="#ccc"/>
+        <text x="530" y="114" text-anchor="middle" font-family="Georgia, serif" font-size="12.5" fill="#222">Radiotherapy</text>
+
+        <!-- sublabels -->
+        <text x="220" y="152" text-anchor="middle" font-family="Georgia, serif" font-size="9.5" font-style="italic" fill="#999">shields against</text>
+        <text x="420" y="152" text-anchor="middle" font-family="Georgia, serif" font-size="9.5" font-style="italic" fill="#999">acts through</text>
+      </svg>
+
+      <p class="example-caption">
+        <span class="hyp-label">The hypothesis:</span> the tardigrade Dsup protein physically shields DNA from hydroxyl-radical strand breaks. Radiotherapy kills cells through those same breaks. So transient Dsup expression in healthy tissue could raise the radiation dose a tumour can be given without protecting the cancer itself.
+      </p>
+      <p class="example-note">Both fields are real and active, yet no published paper connects the two. Illustrative; one example of the kind of link the project looks for.</p>
+    </div>
 
   </div>
 
