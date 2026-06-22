@@ -19,12 +19,18 @@
   </div>
 
   <h1 class="page-title">Iterated Self-Evaluation Impossibility for Large Language Models</h1>
-  <div class="pub-authors">J. Suh et al.</div>
+  <div class="pub-authors">J. Suh</div>
   <div class="pub-venue">IEEE Access &nbsp;&middot;&nbsp; In preparation, 2026</div>
 
   <div class="page-body">
     <p>
-      Self-evaluation, having a model judge its own outputs, is widely used in alignment pipelines. This paper establishes formal impossibility results for iterated self-evaluation: under mild assumptions, repeated self-assessment either converges to a fixed point independent of actual output quality, or diverges. Either way it provides no reliable signal. The paper characterises which evaluation architectures escape the impossibility and which do not.
+      Modern LLMs are rarely run once. Chain-of-thought, self-critique, and agentic loops all run a model repeatedly on its own previous output, trusting that iteration will settle on a stable answer the model endorses. This paper asks a precise question: can a model decide, of its own reasoning loop, that the loop has converged on an answer it endorses?
+    </p>
+    <p>
+      The answer is no, and quantifiably so. Modelling a single forward pass as a computable function and the loop as the partial computation it induces, I show that deciding convergence to a self-endorsed answer is &Sigma;&#8322;-complete, and in particular undecidable even given an oracle for the halting problem. Self-evaluation is therefore strictly harder than halting: even a machine that could detect non-termination still could not decide it. A self-referential argument sharpens the point, any evaluator you could actually implement as a prompt can be effectively falsified on an input built from its own description.
+    </p>
+    <p>
+      The result concerns the unbounded-iteration idealisation: a finite deployed model stays decidable, but the verification horizon grows without bound.
     </p>
   </div>
 
