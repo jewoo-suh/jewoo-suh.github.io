@@ -21,21 +21,48 @@
   <h1 class="page-title">Voynich Decode Project</h1>
   <div class="page-meta">Closed &nbsp;&middot;&nbsp; Solo &nbsp;&middot;&nbsp; Statistical Analysis &nbsp;&middot;&nbsp; Computational Linguistics</div>
 
-  <img class="page-hero" src="../assets/img/voynich-thumb.png" alt="Ridge plot comparing Voynichese character distributions to natural languages and controls" />
+  <img class="page-hero" src="../assets/img/vms-folio.jpg" alt="Folio 10r of the Voynich Manuscript: unknown script above a plant illustration" />
+  <div class="page-meta" style="margin-top:-22px; margin-bottom:28px;">Folio 10r of the Voynich Manuscript (Beinecke MS 408, Yale University). Public domain.</div>
 
   <div class="page-body">
 
     <p>
-      The Voynich Manuscript is a 15th-century illustrated codex in an unknown script. A century of attempted decipherment has produced nothing. The standard hypothesis is that it encodes a language or cipher. This project asked a different question: do the statistical properties of the text actually require a language to explain?
+      The Voynich Manuscript is a 15th-century illustrated book written in a script nobody has ever read. For a century people have tried to break it as a cipher. I approached it from a different angle: instead of asking what it says, I asked what kind of process produced it.
     </p>
 
     <p>
-      A ~200-unit combinatorial generative procedure, with no semantics or intended meaning, just glyph templates and positional rules, reproduces every measured structural property of the manuscript: character distributions, word-length profiles, positional constraints, inter-word entropy. If content-free generation is sufficient to produce statistically identical text, there is no evidential basis for invoking a cipher. The manuscript probably says nothing.
+      I built a battery of statistical measures that fingerprint the generative process behind a text, chosen specifically so they cannot be fooled by simply matching letter frequencies, which is the trap most claimed decodings fall into. Two results stand out. The manuscript has an unusually rigid word-internal structure that a simple template or Markov process reproduces almost exactly, yet no generic cipher I tested can recreate without secretly building the answer in. And its word choices carry a token-minting signature (around 70% near-unique words and very weak word-to-word dependency) that appears in generated text but in no clean natural language.
     </p>
 
     <p>
-      The ridge plot above shows Voynichese character distributions against natural languages and constructed controls. It clusters with the synthetic controls. Project closed.
+      Taken together, the structure looks generated rather than enciphered. I stop short of claiming the manuscript is meaningless: whether the word choices encode real content is a separate layer and stays open. But the evidence leans against the straightforward cipher story that has driven most attempts to read it.
     </p>
+
+  </div>
+
+  <div class="figures-box">
+    <div class="box-label">Selected results</div>
+
+    <figure class="result-fig">
+      <img src="../assets/img/vms-wordclasses.png" alt="Dendrogram clustering the top 60 Voynichese words by distributional profile" />
+      <figcaption>
+        <span class="fig-lead">Word classes.</span> Clustering the most frequent words by how they distribute across the text reveals clean, well-separated word classes, evidence of the rigid internal grammar that the generative process imposes.
+      </figcaption>
+    </figure>
+
+    <figure class="result-fig">
+      <img src="../assets/img/vms-rmsf.png" alt="RMS fluctuation curves comparing Voynichese to natural language texts and controls" />
+      <figcaption>
+        <span class="fig-lead">Long-range structure.</span> RMS-fluctuation curves measure how predictability decays over long spans. Voynichese (voynich_b) sits among real texts rather than collapsing to noise, so it is structured, not random gibberish, while still failing to behave like enciphered natural language.
+      </figcaption>
+    </figure>
+
+    <figure class="result-fig">
+      <img src="../assets/img/voynich-thumb.png" alt="Ridge plot comparing Voynichese distributions to natural languages and controls" />
+      <figcaption>
+        <span class="fig-lead">Distributional comparison.</span> Voynichese character statistics placed against natural languages and constructed controls; it lines up with the generated controls rather than the natural languages.
+      </figcaption>
+    </figure>
 
   </div>
 

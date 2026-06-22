@@ -243,6 +243,36 @@ h1.page-title {
 }
 .page-link:hover { color: #111; border-color: #111; }
 
+/* --- FIGURES (results) --- */
+.figures-box { margin-top: 28px; }
+.figures-box .box-label {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+figure.result-fig {
+  margin-bottom: 26px;
+}
+figure.result-fig img {
+  width: 100%;
+  display: block;
+  border: 1px solid #eee;
+  background: #fff;
+}
+figure.result-fig figcaption {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.55;
+  margin-top: 8px;
+}
+figure.result-fig figcaption .fig-lead {
+  font-weight: 600;
+  color: #333;
+}
+
 /* --- LEXICON CHART (language sim) --- */
 .lexicon-box {
   border: 1px solid #e8e8e8;
