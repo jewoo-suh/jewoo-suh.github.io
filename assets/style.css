@@ -68,6 +68,17 @@ section h2 {
   border-bottom: 1px solid #e8e8e8;
   padding-bottom: 7px;
   margin-bottom: 24px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+section h2 .h2-hint {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-style: italic;
+  color: #bbb;
+  font-size: 0.72rem;
 }
 
 /* --- ABOUT --- */
