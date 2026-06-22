@@ -19,7 +19,7 @@
   </div>
 
   <h1 class="page-title">Voynich Decode Project</h1>
-  <div class="page-meta">Closed &nbsp;&middot;&nbsp; Solo &nbsp;&middot;&nbsp; Statistical Analysis &nbsp;&middot;&nbsp; Computational Linguistics</div>
+  <div class="page-meta">Suspended &nbsp;&middot;&nbsp; Solo &nbsp;&middot;&nbsp; Statistical Analysis &nbsp;&middot;&nbsp; Computational Linguistics</div>
 
   <img class="page-hero" src="../assets/img/vms-folio.jpg" alt="Folio 10r of the Voynich Manuscript: unknown script above a plant illustration" />
   <div class="page-meta" style="margin-top:-22px; margin-bottom:28px;">Folio 10r of the Voynich Manuscript (Beinecke MS 408, Yale University). Public domain.</div>
@@ -27,15 +27,15 @@
   <div class="page-body">
 
     <p>
-      The Voynich Manuscript is a 15th-century illustrated book written in a script nobody has ever read. For a century people have tried to break it as a cipher. I approached it from a different angle: instead of asking what it says, I asked what kind of process produced it.
+      The Voynich Manuscript is a 15th-century illustrated book written in a unique script that has never been identified. Experts generally fall into three camps on its linguistic origin: an encoded natural language, an artificial constructed language, or a hoax. Of the three, my analysis concludes that the script leans towards the constructed-language theory.
     </p>
 
     <p>
-      I built a battery of statistical measures that fingerprint the generative process behind a text, chosen specifically so they cannot be fooled by simply matching letter frequencies, which is the trap most claimed decodings fall into. Two results stand out. The manuscript has an unusually rigid word-internal structure that a simple template or Markov process reproduces almost exactly, yet no generic cipher I tested can recreate without secretly building the answer in. And its word choices carry a token-minting signature (around 70% near-unique words and very weak word-to-word dependency) that appears in generated text but in no clean natural language.
+      Leveraging the power of the Claude CLI, I constructed various statistical measures that fingerprint the generative process behind a text. Two results stood out the most. First, the manuscript has an unusually rigid word-internal structure that a simple template or Markov process reproduces almost exactly, yet no generic cipher I tested can recreate without secretly building the answer in. Second, the manuscript&rsquo;s word choices carry a token-minting signature (around 70% near-unique words and very weak word-to-word dependency) that appears in generated text but in no clean natural language.
     </p>
 
     <p>
-      Taken together, the structure looks generated rather than enciphered. I stop short of claiming the manuscript is meaningless: whether the word choices encode real content is a separate layer and stays open. But the evidence leans against the straightforward cipher story that has driven most attempts to read it.
+      Taken together, the structure looks generated rather than enciphered. I stop short of claiming the manuscript is meaningless, as that is an unfalsifiable claim. Whether the word choices encode real content is a separate layer and stays open. But the evidence leans against the straightforward cipher story that has driven most attempts to read it.
     </p>
 
   </div>
@@ -44,23 +44,44 @@
     <div class="box-label">Selected results</div>
 
     <figure class="result-fig">
+      <img src="../assets/img/vms-fsm.png" alt="Finite-state machine learned from the Voynichese glyph stream" />
+      <figcaption>
+        <span class="fig-lead">The slot grammar as a state machine.</span> A finite-state machine learned from the glyph stream. The manuscript&rsquo;s words follow rigid positional rules, drawn here as a state grammar with strong, near-deterministic transitions (the heavier the arrow, the more reliable the step). This rigidity is the structure no generic cipher could reproduce.
+      </figcaption>
+    </figure>
+
+    <figure class="result-fig">
+      <img src="../assets/img/vms-glyphclusters.png" alt="Dendrogram clustering Voynichese glyphs by transition behaviour" />
+      <figcaption>
+        <span class="fig-lead">Glyphs sort into functional classes.</span> Clustering each glyph by what tends to precede and follow it. The alphabet organises itself into clean roles (gallows, benches, finals), exactly what you expect from a positional template rather than a phonetic alphabet.
+      </figcaption>
+    </figure>
+
+    <figure class="result-fig">
       <img src="../assets/img/vms-wordclasses.png" alt="Dendrogram clustering the top 60 Voynichese words by distributional profile" />
       <figcaption>
-        <span class="fig-lead">Word classes.</span> Clustering the most frequent words by how they distribute across the text reveals clean, well-separated word classes, evidence of the rigid internal grammar that the generative process imposes.
+        <span class="fig-lead">Word classes.</span> The same clustering on whole words. The most frequent words split into well-separated distributional classes, more evidence of rigid internal grammar.
+      </figcaption>
+    </figure>
+
+    <figure class="result-fig">
+      <img src="../assets/img/vms-hurst.png" alt="Hurst exponent and crossover comparison, original versus shuffled text" />
+      <figcaption>
+        <span class="fig-lead">The structure lives in the ordering.</span> Hurst-exponent analysis on the original text versus a shuffled copy. Voynichese (voynich_b) shows long-range correlation (&alpha; well above 0.5) that collapses toward randomness once shuffled, so the order of the words carries real structure, not just their frequencies.
       </figcaption>
     </figure>
 
     <figure class="result-fig">
       <img src="../assets/img/vms-rmsf.png" alt="RMS fluctuation curves comparing Voynichese to natural language texts and controls" />
       <figcaption>
-        <span class="fig-lead">Long-range structure.</span> RMS-fluctuation curves measure how predictability decays over long spans. Voynichese (voynich_b) sits among real texts rather than collapsing to noise, so it is structured, not random gibberish, while still failing to behave like enciphered natural language.
+        <span class="fig-lead">Long-range fluctuation.</span> RMS-fluctuation curves measure how predictability decays over long spans. Voynichese sits among real texts rather than collapsing to noise: it is structured, not random gibberish, while still not behaving like enciphered natural language.
       </figcaption>
     </figure>
 
     <figure class="result-fig">
       <img src="../assets/img/voynich-thumb.png" alt="Ridge plot comparing Voynichese distributions to natural languages and controls" />
       <figcaption>
-        <span class="fig-lead">Distributional comparison.</span> Voynichese character statistics placed against natural languages and constructed controls; it lines up with the generated controls rather than the natural languages.
+        <span class="fig-lead">Distributional comparison.</span> Voynichese character statistics placed against natural languages and human-made gibberish samples (after Gaskell &amp; Bowern, 2022); it lines up with the constructed controls rather than the natural languages.
       </figcaption>
     </figure>
 
