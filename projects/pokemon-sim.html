@@ -21,65 +21,31 @@
   <h1 class="page-title">Pok&eacute;mon Ecosystem Simulator</h1>
   <div class="page-meta">Closed &nbsp;&middot;&nbsp; Solo &nbsp;&middot;&nbsp; Agent-Based Simulation &nbsp;&middot;&nbsp; Ecological Modelling</div>
 
-  <svg class="page-hero-svg" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0"   y="0"   width="170" height="170" fill="#b0cc9a"/>
-    <rect x="170" y="0"   width="170" height="120" fill="#e8d898"/>
-    <rect x="340" y="0"   width="170" height="170" fill="#9abcd4"/>
-    <rect x="510" y="0"   width="170" height="170" fill="#c4b49a"/>
-    <rect x="0"   y="170" width="200" height="170" fill="#d4bc9a"/>
-    <rect x="200" y="120" width="160" height="220" fill="#c0d4a8"/>
-    <rect x="360" y="170" width="170" height="170" fill="#a8bcd4"/>
-    <rect x="530" y="170" width="150" height="170" fill="#d0bca8"/>
-    <rect width="680" height="340" fill="rgba(255,255,255,0.12)"/>
-    <circle cx="40"  cy="35"  r="4.5" fill="#e05555" opacity="0.9"/>
-    <circle cx="80"  cy="70"  r="3.5" fill="#e07730" opacity="0.9"/>
-    <circle cx="25"  cy="100" r="4"   fill="#e05555" opacity="0.9"/>
-    <circle cx="120" cy="42"  r="3"   fill="#884488" opacity="0.9"/>
-    <circle cx="150" cy="80"  r="3.5" fill="#e07730" opacity="0.9"/>
-    <circle cx="60"  cy="140" r="4"   fill="#33aa66" opacity="0.9"/>
-    <circle cx="110" cy="120" r="3"   fill="#3388cc" opacity="0.9"/>
-    <circle cx="200" cy="30"  r="4"   fill="#e0c030" opacity="0.9"/>
-    <circle cx="250" cy="65"  r="3"   fill="#e07730" opacity="0.9"/>
-    <circle cx="290" cy="95"  r="3.5" fill="#e0c030" opacity="0.9"/>
-    <circle cx="220" cy="100" r="2.5" fill="#cc4444" opacity="0.9"/>
-    <circle cx="380" cy="25"  r="4"   fill="#3388cc" opacity="0.9"/>
-    <circle cx="430" cy="70"  r="3.5" fill="#3388cc" opacity="0.9"/>
-    <circle cx="460" cy="120" r="3"   fill="#33aa66" opacity="0.9"/>
-    <circle cx="390" cy="100" r="2.5" fill="#5566cc" opacity="0.9"/>
-    <circle cx="545" cy="40"  r="4"   fill="#cc4444" opacity="0.9"/>
-    <circle cx="590" cy="85"  r="3.5" fill="#884488" opacity="0.9"/>
-    <circle cx="620" cy="140" r="3"   fill="#cc4444" opacity="0.9"/>
-    <circle cx="555" cy="110" r="3"   fill="#e05555" opacity="0.9"/>
-    <circle cx="50"  cy="200" r="3.5" fill="#e07730" opacity="0.9"/>
-    <circle cx="110" cy="240" r="4"   fill="#33aa66" opacity="0.9"/>
-    <circle cx="160" cy="280" r="3"   fill="#e05555" opacity="0.9"/>
-    <circle cx="80"  cy="310" r="3.5" fill="#884488" opacity="0.9"/>
-    <circle cx="250" cy="180" r="4"   fill="#3388cc" opacity="0.9"/>
-    <circle cx="290" cy="240" r="3"   fill="#884488" opacity="0.9"/>
-    <circle cx="320" cy="300" r="3.5" fill="#e0c030" opacity="0.9"/>
-    <circle cx="230" cy="290" r="3"   fill="#33aa66" opacity="0.9"/>
-    <circle cx="400" cy="210" r="4"   fill="#cc4444" opacity="0.9"/>
-    <circle cx="460" cy="270" r="3.5" fill="#33aa66" opacity="0.9"/>
-    <circle cx="500" cy="320" r="3"   fill="#e07730" opacity="0.9"/>
-    <circle cx="420" cy="310" r="3.5" fill="#5566cc" opacity="0.9"/>
-    <circle cx="570" cy="220" r="4"   fill="#e05555" opacity="0.9"/>
-    <circle cx="620" cy="280" r="3"   fill="#3388cc" opacity="0.9"/>
-    <circle cx="645" cy="310" r="3.5" fill="#884488" opacity="0.9"/>
-    <circle cx="600" cy="185" r="3"   fill="#e0c030" opacity="0.9"/>
-  </svg>
+  <img class="page-hero" src="../assets/img/pokemon-map.png" alt="A procedurally generated biome map populated with Pokemon agents" />
+  <div class="page-meta" style="margin-top:-22px; margin-bottom:28px;">The world: procedurally generated biomes, speckled with the agents living in them.</div>
 
   <div class="page-body">
 
     <p>
-      1,025 Pok&eacute;mon species, a world of biomes, and traits derived from actual game data, then left to run. Metabolism, reproduction rate, predation targets, habitat preference: all computed from the game&rsquo;s stats and type system rather than made up. A fast Pok&eacute;mon with high Attack and a carnivore typing becomes a predator. A slow, high-Defence grass type becomes prey.
+      A while back I got curious what would happen if you placed every Pok&eacute;mon species into one world and just let them live. This is the result: all 1,025 species dropped into a procedurally generated map of biomes, with each species&rsquo; ecological traits (diet, metabolism, speed, reproduction) derived from its actual in-game stats rather than hand-assigned.
     </p>
 
     <p>
-      No interactions are scripted. Food chains, population booms, territorial collapses, and long-run equilibria emerge from the numbers alone. The interesting part: dominant predators occasionally grow their population so large they consume their own food supply and crash shortly after. Invasive species introduced into a stable ecosystem trigger cascading extinctions. None of this is programmed; it follows from the parameter interactions.
+      Nothing about the outcome is scripted. Each creature simply follows its traits, and the whole ecosystem falls out of those simple rules on its own: food chains form, populations boom and crash, dominant predators sometimes eat through their own food supply and collapse, and seasons and natural disasters keep shaking things up. You can run the whole thing live in the browser.
     </p>
 
     <a class="page-link" href="https://jewoo-suh.github.io/pokemon-ecosystem-simulator/" target="_blank" rel="noopener">Live demo &rarr;</a>
 
+  </div>
+
+  <div class="figures-box">
+    <div class="box-label">The dashboard, mid-run</div>
+    <figure class="result-fig">
+      <img src="../assets/img/pokemon-dashboard.png" alt="The live simulator dashboard: biome map, population-over-time chart, trophic pyramid, and an event log" />
+      <figcaption>
+        <span class="fig-lead">A living ecosystem.</span> The biome map alongside live readouts: population over time, the trophic pyramid, per-biome species, and a running log of ecosystem events (booms, crashes, extinctions) as they happen.
+      </figcaption>
+    </figure>
   </div>
 
   <div class="page-tags">Agent-Based Simulation &nbsp;&middot;&nbsp; Ecological Modelling &nbsp;&middot;&nbsp; Emergent Behaviour &nbsp;&middot;&nbsp; Solo</div>
