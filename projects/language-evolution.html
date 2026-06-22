@@ -26,16 +26,89 @@
   <div class="page-body">
 
     <p>
-      Agents start with no language. They produce arbitrary sounds and are selected entirely by how well those sounds let them communicate with other agents. No designed phonology, no target grammar, no reward signal telling the system what structure should look like. After enough generations, structure appears anyway.
+      This is a project I have been building to see whether language can evolve on its own, with nothing designed in advance. Around a thousand agents start with no words, no grammar, and no sounds. The only thing they are rewarded for is communicating successfully, and over thousands of generations a real language grows out of nothing.
     </p>
 
     <p>
-      Current results: a ~50-word lexicon with CVC phonology, fully compositional grammar, four emergent grammatical categories (number, degree, aspect, magnitude), evidentiality, and tense. 86% role-decoding accuracy across communicative scenarios. Compositionality wasn&rsquo;t designed in; it emerged because it&rsquo;s the memory-efficient solution when you need to communicate a large space of situations with a small signal inventory.
+      The language that emerges is genuinely structured. It has a sound system of 5 vowels and 12 consonants, a rigid word order that does grammatical work, an evidential system (words that mark whether the speaker witnessed something or only heard about it), cliticised tense, and a graded number system (singular, paucal, plural) that emerged by composition rather than by inventing new words. Given a transitive sentence, agents recover who did what to whom around 84% of the time. None of this was specified; all of it evolved.
     </p>
 
     <p>
-      Ongoing. Current work is testing whether the grammatical categories generalise or fragment under a richer communicative environment, and characterising the transition from holistic to compositional signalling more precisely.
+      Everything below is measured directly from the agents&rsquo; corpus, not hand-written. It is one representative run.
     </p>
+
+  </div>
+
+  <div class="lexicon-box">
+    <div class="box-label">A slice of the lexicon</div>
+    <div class="lexicon-grid">
+
+      <div class="lex-group">
+        <div class="lex-cat">Directions</div>
+        <div class="lex-row"><span class="lex-word">muw</span><span class="lex-mean">north</span></div>
+        <div class="lex-row"><span class="lex-word">wik</span><span class="lex-mean">south</span></div>
+        <div class="lex-row"><span class="lex-word">sow</span><span class="lex-mean">east</span></div>
+        <div class="lex-row"><span class="lex-word">sis</span><span class="lex-mean">west</span></div>
+      </div>
+
+      <div class="lex-group">
+        <div class="lex-cat">People &amp; deixis</div>
+        <div class="lex-row"><span class="lex-word">nelt</span><span class="lex-mean">I, self</span></div>
+        <div class="lex-row"><span class="lex-word">du</span><span class="lex-mean">other</span></div>
+        <div class="lex-row"><span class="lex-word">lid</span><span class="lex-mean">this</span></div>
+        <div class="lex-row"><span class="lex-word">ma</span><span class="lex-mean">that</span></div>
+      </div>
+
+      <div class="lex-group">
+        <div class="lex-cat">Time</div>
+        <div class="lex-row"><span class="lex-word">dew</span><span class="lex-mean">past</span></div>
+        <div class="lex-row"><span class="lex-word">wot</span><span class="lex-mean">near</span></div>
+        <div class="lex-row"><span class="lex-word">tar</span><span class="lex-mean">gone</span></div>
+      </div>
+
+      <div class="lex-group">
+        <div class="lex-cat">Evidence</div>
+        <div class="lex-row"><span class="lex-word">nut</span><span class="lex-mean">witnessed</span></div>
+        <div class="lex-row"><span class="lex-word">waw</span><span class="lex-mean">remembered</span></div>
+      </div>
+
+      <div class="lex-group">
+        <div class="lex-cat">Number</div>
+        <div class="lex-row"><span class="lex-word">geg</span><span class="lex-mean">a few</span></div>
+        <div class="lex-row"><span class="lex-word">ram</span><span class="lex-mean">many</span></div>
+      </div>
+
+      <div class="lex-group">
+        <div class="lex-cat">Content &amp; state</div>
+        <div class="lex-row"><span class="lex-word">nel</span><span class="lex-mean">food</span></div>
+        <div class="lex-row"><span class="lex-word">nen</span><span class="lex-mean">berry</span></div>
+        <div class="lex-row"><span class="lex-word">bak</span><span class="lex-mean">hungry</span></div>
+        <div class="lex-row"><span class="lex-word">to</span><span class="lex-mean">no</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sentences-box">
+    <div class="box-label">Sample sentences</div>
+
+    <div class="sentence">
+      <div class="sent-form">wam sis wot</div>
+      <div class="sent-gloss">water &middot; west &middot; near</div>
+      <div class="sent-read">&ldquo;Water, to the west, close by.&rdquo;</div>
+    </div>
+
+    <div class="sentence">
+      <div class="sent-form">nelt lid&middot;ram</div>
+      <div class="sent-gloss">self &middot; this-food &middot; plural</div>
+      <div class="sent-read">&ldquo;This food of mine, lots of it.&rdquo;</div>
+    </div>
+
+    <div class="sentence">
+      <div class="sent-form">nelt nut&middot;dew</div>
+      <div class="sent-gloss">self &middot; witnessed-past &middot; water</div>
+      <div class="sent-read">&ldquo;I saw water (and I witnessed it myself).&rdquo;</div>
+    </div>
 
   </div>
 
