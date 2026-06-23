@@ -34,7 +34,7 @@ header { margin-bottom: 52px; }
 
 .header-photo {
   width: 200px;
-  height: 200px;
+  height: 150px;
   flex-shrink: 0;
   object-fit: cover;
   background: #f0f0ee;
@@ -51,7 +51,7 @@ header { margin-bottom: 52px; }
 
 @media (max-width: 460px) {
   .header-inner { flex-direction: column; gap: 18px; }
-  .header-photo { width: 72px; height: 72px; }
+  .header-photo { width: 180px; height: 135px; }
 }
 
 /* --- INNER PAGE HEADER --- */
