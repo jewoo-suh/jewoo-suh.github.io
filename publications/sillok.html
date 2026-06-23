@@ -28,7 +28,7 @@
       In this paper, we present <code>.sillok</code>: a lossless encoding for Korean text, built for long-term archival. The encoding mechanism for <code>.sillok</code> first breaks each Hangul syllable into its onset, vowel, and coda and then codes each position with a fixed, published Huffman table, storing a syllable in 9.46 bits on average against UTF-8&rsquo;s 24. Numbers, embedded non-Hangul text, spacing, and document structure each get their own lossless representation via an ASCII escape procedure.
     </p>
     <p>
-      The motivation behind this paper was creating a durable yet storage-efficient archive for Korean news. It takes its name from the <i>Joseon Wangjo Sillok</i> (the daily royal annals that remain readable centuries later) and aims for the same property of outliving its own tools. Thus, a <code>.sillok</code> bitstream is meant to be recoverable from the bits alone, through knowledge of Korean phonology and frequency analysis, with no software decoder required.
+      The motivation behind this paper was creating a durable yet storage-efficient archive for Korean news. It takes its name from the <i>Joseon Wangjo Sillok</i> (the daily royal annals of the Joseon Dynasty of Korea) and aims for the same property of outliving its own tools. Thus, a <code>.sillok</code> bitstream is meant to be recoverable from the bits alone, through knowledge of Korean phonology and frequency analysis, with no software decoder required.
     </p>
     <p>
       On a custom-compiled Korean news corpus, it reduces records by 56.4% versus UTF-8, matching Brotli and beating gzip, zstd, and lzma, while being the only one of them reconstructible from the bitstream alone.
