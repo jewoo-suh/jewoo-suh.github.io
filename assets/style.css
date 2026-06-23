@@ -507,3 +507,29 @@ footer {
 }
 footer a { color: #bbb; text-decoration: none; border-bottom: 1px solid #ddd; }
 footer a:hover { color: #555; border-color: #555; }
+
+/* --- XKCD COMIC --- */
+.comic {
+  text-align: center;
+  margin-top: 56px;
+}
+.comic img {
+  width: 225px;
+  max-width: 70%;
+  height: auto;
+  opacity: 0.8;
+  cursor: help;
+  transition: opacity 0.15s ease;
+}
+.comic img:hover { opacity: 1; }
+.comic figcaption {
+  font-size: 0.72rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+.comic figcaption a {
+  color: #ccc;
+  text-decoration: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+.comic figcaption a:hover { color: #777; border-color: #777; }
