@@ -24,7 +24,13 @@
 
   <div class="page-body">
     <p>
-      In multi-agent systems where a leader allocates tasks to followers, followers have an incentive to misreport their capabilities. This paper studies the mechanism design problem of making truthful reporting a dominant strategy. We characterise the class of truthful mechanisms for leader&ndash;follower allocation, prove impossibility results for certain combinations of desiderata, and propose mechanisms that achieve truthfulness alongside efficiency and fairness properties where possible.
+      A leader has to hand out tasks and split a limited, productive resource among self-interested agents who privately know how competent they are. There is no money to pay for honesty, no way to verify what an agent reports, and no way to reward agents based on results. Can the leader still get them to report truthfully, and what does it cost?
+    </p>
+    <p>
+      The key observation is structural. Under a natural model of how competence and resource translate into success, each agent&rsquo;s expected payoff turns out to be affine (a straight line) in its private competence, which reduces the whole screening problem to simple geometry. From there, the paper solves the ideal full-information allocation (matching agents to missions, then &ldquo;water-filling&rdquo; the budget across them), shows that naively reusing that allocation on self-reported competence is not truthful, and that the profitable lie even flips direction with how heavily the resource is weighted: agents sandbag when it is small and over-claim when it is large. It then gives the leader-optimal truthful mechanism, with a welfare loss (a &ldquo;price of truthfulness&rdquo;) that is only second-order in the incentive slack.
+    </p>
+    <p>
+      The predictions are tested behaviourally. Open-weight LLM agents in repeated play learn to exploit the naive rule exactly as the theory predicts, and learn to report truthfully under the corrected mechanism, with misreporting falling from 54% to 12%.
     </p>
   </div>
 

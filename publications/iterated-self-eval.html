@@ -24,13 +24,13 @@
 
   <div class="page-body">
     <p>
-      Modern LLMs are rarely run once. Chain-of-thought, self-critique, and agentic loops all run a model repeatedly on its own previous output, trusting that iteration will settle on a stable answer the model endorses. This paper asks a precise question: can a model decide, of its own reasoning loop, that the loop has converged on an answer it endorses?
+      Modern LLMs are rarely prompted once. Chain-of-thought, self-critique, and agentic loops all run a model repeatedly on its own previous output, trusting that iteration will settle on a stable answer the model endorses. This paper asks a precise question: can a model decide, of its own reasoning loop, that the loop has converged on an answer it endorses?
     </p>
     <p>
-      The answer is no, and quantifiably so. Modelling a single forward pass as a computable function and the loop as the partial computation it induces, I show that deciding convergence to a self-endorsed answer is &Sigma;&#8322;-complete, and in particular undecidable even given an oracle for the halting problem. Self-evaluation is therefore strictly harder than halting: even a machine that could detect non-termination still could not decide it. A self-referential argument sharpens the point, any evaluator you could actually implement as a prompt can be effectively falsified on an input built from its own description.
+      Mathematically, the answer is no: modelling a single forward pass as a computable function and the loop as the partial computation it induces, this paper shows that deciding convergence to a self-endorsed answer is &Sigma;&#8322;-complete, thus undecidable even given an oracle for the halting problem. Via self-referential arguments, the paper also shows that any evaluator you could actually implement as a prompt can be effectively falsified on an input built from its own description.
     </p>
     <p>
-      The result concerns the unbounded-iteration idealisation: a finite deployed model stays decidable, but the verification horizon grows without bound.
+      Fortunately, this limit is theoretical rather than practical. It lives in the idealisation where a model has unbounded context and is therefore Turing-complete; a real deployment with finite context stays decidable, and the impossibility surfaces only as a limiting case.
     </p>
   </div>
 
