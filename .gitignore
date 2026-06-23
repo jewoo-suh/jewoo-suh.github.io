@@ -1,0 +1,3 @@
+# Journal stays unpublished until ready: generated pages are local-only.
+# To publish: remove these lines, run python build_journal.py, re-add the header link, commit.
+journal/*.html
