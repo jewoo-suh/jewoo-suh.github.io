@@ -509,6 +509,13 @@ footer {
 }
 footer a { color: #bbb; text-decoration: none; border-bottom: 1px solid #ddd; }
 footer a:hover { color: #555; border-color: #555; }
+footer .footer-note {
+  margin-top: 14px;
+  font-size: 0.73rem;
+  color: #c4c4c4;
+  line-height: 1.55;
+  max-width: 540px;
+}
 
 /* --- OUTRO DIVIDER --- */
 .outro {
