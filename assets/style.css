@@ -28,15 +28,18 @@ header { margin-bottom: 52px; }
 
 .header-inner {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 28px;
 }
 
 .header-photo {
   width: 200px;
-  height: 150px;
+  align-self: stretch;
+  height: auto;
+  min-height: 0;
   flex-shrink: 0;
   object-fit: cover;
+  object-position: center 28%;
   background: #f0f0ee;
   border: 1px solid #dededc;
   display: block;
