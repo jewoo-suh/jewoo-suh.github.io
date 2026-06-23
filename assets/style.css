@@ -39,7 +39,7 @@ header { margin-bottom: 52px; }
   min-height: 0;
   flex-shrink: 0;
   object-fit: cover;
-  object-position: center 28%;
+  object-position: center center;
   background: #f0f0ee;
   border: 1px solid #dededc;
   display: block;
