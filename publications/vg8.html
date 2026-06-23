@@ -31,6 +31,45 @@
     </p>
   </div>
 
+  <div class="code-box">
+    <div class="box-label">From the source &middot; CPU.v</div>
+<pre class="code"><span class="cm">// 8-bit ALU for the VG8 CPU</span>
+<span class="kw">module</span> ALU(A, B, carry, alu_opc, Y, Z_out, C_out);
+  <span class="kw">parameter</span> N = 8;            <span class="cm">// default width = 8 bits</span>
+  <span class="kw">input</span>  [N-1:0] A;           <span class="cm">// operand A</span>
+  <span class="kw">input</span>  [N-1:0] B;           <span class="cm">// operand B</span>
+  <span class="kw">input</span>          carry;       <span class="cm">// carry in</span>
+  <span class="kw">input</span>  [4:0]   alu_opc;     <span class="cm">// 5-bit ALU operation</span>
+  <span class="kw">output reg</span> [N-1:0] Y;       <span class="cm">// result</span>
+  <span class="kw">output reg</span> Z_out, C_out;     <span class="cm">// zero / carry flags</span>
+
+  <span class="kw">always</span> @(*) <span class="kw">begin</span>
+    Z_out = 0;
+    C_out = 0;
+    <span class="kw">case</span> (alu_opc)
+      `OP_ZERO:   Y = 0;                         <span class="cm">// unary</span>
+      `OP_LOAD_A: Y = A;
+      `OP_INC:    Y = A + 1;
+      `OP_DEC:    Y = A - 1;
+      `OP_ADD: {C_out, Y} = A + B;               <span class="cm">// binary</span>
+      `OP_SUB: {C_out, Y} = A - B;
+      `OP_ADC: {C_out, Y} = A + B + (carry ? 1 : 0);
+      `OP_AND: Y = A &amp; B;                        <span class="cm">// logical</span>
+      `OP_OR:  Y = A | B;
+      `OP_XOR: Y = A ^ B;
+      `OP_NOT: Y = ~A;
+      `OP_SHL: {C_out, Y} = {A, 1'b0};           <span class="cm">// shift left,  carry out</span>
+      `OP_SHR: {Y, C_out} = {1'b0, A[N-1:1]};    <span class="cm">// shift right, carry out</span>
+      `OP_ROL: {C_out, Y} = {A, carry};          <span class="cm">// rotate through carry</span>
+      `OP_ROR: {Y, C_out} = {carry, A[N-1:1]};
+      <span class="kw">default</span>: Y = 0;
+    <span class="kw">endcase</span>
+    <span class="kw">if</span> (Y == 8'b0) Z_out = 1;                    <span class="cm">// set zero flag</span>
+  <span class="kw">end</span>
+<span class="kw">endmodule</span></pre>
+    <p class="code-cap">The VG8&rsquo;s arithmetic logic unit: every CPU operation dispatched from a single combinational case block, written by hand in Verilog.</p>
+  </div>
+
   <div class="figures-box">
     <div class="box-label">Running on hardware</div>
 

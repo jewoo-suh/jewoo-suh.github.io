@@ -254,6 +254,26 @@ h1.page-title {
 }
 .page-link:hover { color: #111; border-color: #111; }
 
+/* --- CODE BLOCK (vg8) --- */
+.code-box { margin-top: 28px; }
+.code-box .box-label {
+  font-size: 0.66rem; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #aaa; margin-bottom: 14px;
+}
+pre.code {
+  background: #f8f8f6;
+  border: 1px solid #ececec;
+  padding: 16px 18px;
+  overflow-x: auto;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 0.74rem;
+  line-height: 1.7;
+  color: #2a2a2a;
+}
+pre.code .cm { color: #a2a89f; }
+pre.code .kw { color: #4a7a6a; }
+.code-cap { font-size: 0.78rem; color: #888; margin-top: 10px; font-style: italic; }
+
 /* --- HUFFMAN TABLES + ENCODING EXAMPLE (sillok) --- */
 .huff-box { margin-top: 28px; }
 .huff-box .box-label, .encode-box .box-label {
