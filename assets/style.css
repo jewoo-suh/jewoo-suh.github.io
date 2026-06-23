@@ -36,8 +36,10 @@ header { margin-bottom: 52px; }
   width: 92px;
   height: 92px;
   flex-shrink: 0;
+  object-fit: cover;
   background: #f0f0ee;
   border: 1px solid #dededc;
+  display: block;
 }
 
 .header-text { flex: 1; padding-top: 2px; }
