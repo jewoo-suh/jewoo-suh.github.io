@@ -24,15 +24,15 @@
 
   <div class="page-body">
     <p>
-      The VG8 is a simplified 8-bit game console built from scratch in Verilog HDL on a contemporary FPGA (an iCEBreaker board), designed as a platform for directly comparing the hardware of 1980s personal computers and game consoles. Rather than emulating in software, every subsystem is implemented in hardware: an 8-bit CPU with ALU, a memory subsystem with RAM, VRAM, and ROM blocks, a Picture Processing Unit with tile-based rendering and hardware sprites, an Audio Processing Unit with multiple sound channels, and a unified memory-mapped I/O subsystem. All subsystems were tested and confirmed functional.
+      The VG8 is a simplified 8-bit game console built from scratch in Verilog HDL on a contemporary FPGA (iCEBreaker v1.0e board), designed as a platform for directly comparing the hardware of 1980s personal computers and game consoles. The subsystems required to constitute an 8-bit game console are implemented in hardware: an 8-bit CPU with ALU, a memory subsystem with RAM, VRAM, and ROM blocks, a Picture Processing Unit with tile-based rendering and hardware sprites, an Audio Processing Unit with multiple sound channels, and a unified memory-mapped I/O subsystem. All subsystems were tested and confirmed functional.
     </p>
     <p>
-      With the working prototype alongside original hardware manuals and technical references, the thesis analyses the design trade-offs the two families of machine made. Game consoles favoured deterministic, real-time performance through dedicated hardware subsystems; personal computers favoured general-purpose architectures that bought expandability at the cost of greater latency. The result is both a documented hardware comparison for historical preservation and a baseline platform for future architectural studies.
+      With the working prototype alongside original hardware manuals and technical references, the thesis analyses the design trade-offs between game consoles and personal computers in the 1980s. At the time, the technology was not yet capable of a single general-purpose machine that could do everything well, the way a modern PC handles both work and gaming, so the two families diverged into specialised designs. Game consoles favoured deterministic, real-time performance through dedicated hardware subsystems; personal computers favoured general-purpose architectures that bought expandability at the cost of greater latency. The paper is both a documented hardware comparison for historical preservation and a baseline platform for future architectural studies.
     </p>
   </div>
 
   <div class="code-box">
-    <div class="box-label">From the source &middot; CPU.v</div>
+    <div class="box-label">Example code &middot; CPU.v</div>
 <pre class="code"><span class="cm">// 8-bit ALU for the VG8 CPU</span>
 <span class="kw">module</span> ALU(A, B, carry, alu_opc, Y, Z_out, C_out);
   <span class="kw">parameter</span> N = 8;            <span class="cm">// default width = 8 bits</span>
@@ -49,6 +49,7 @@
     <span class="kw">case</span> (alu_opc)
       `OP_ZERO:   Y = 0;                         <span class="cm">// unary</span>
       `OP_LOAD_A: Y = A;
+      `OP_LOAD_B: Y = B;
       `OP_INC:    Y = A + 1;
       `OP_DEC:    Y = A - 1;
       `OP_ADD: {C_out, Y} = A + B;               <span class="cm">// binary</span>
@@ -66,8 +67,13 @@
     <span class="kw">endcase</span>
     <span class="kw">if</span> (Y == 8'b0) Z_out = 1;                    <span class="cm">// set zero flag</span>
   <span class="kw">end</span>
-<span class="kw">endmodule</span></pre>
-    <p class="code-cap">The VG8&rsquo;s arithmetic logic unit: every CPU operation dispatched from a single combinational case block, written by hand in Verilog.</p>
+<span class="kw">endmodule</span>
+
+      <span class="cm">. . .</span>
+
+<span class="cm">// CPU.v continues: opcode table, register file,</span>
+<span class="cm">// control-unit FSM, and the memory interface.</span></pre>
+    <p class="code-cap">The VG8&rsquo;s arithmetic logic unit within the CPU; each operation is dispatched from a single combinational case block, hand-coded in Verilog. (This is one module of a much longer file.)</p>
   </div>
 
   <div class="figures-box">
@@ -76,14 +82,14 @@
     <figure class="result-fig">
       <img src="../assets/img/vg8-screen-full.jpg" alt="The VG8 rendering a full tiled background on a monitor over VGA" />
       <figcaption>
-        <span class="fig-lead">The PPU, live.</span> A full frame of tile-based background driven by the VG8&rsquo;s Picture Processing Unit and output over VGA from the FPGA.
+        <span class="fig-lead">The VG8, live.</span> A full frame of tile-based background driven by the VG8&rsquo;s Picture Processing Unit and output over VGA from the FPGA.
       </figcaption>
     </figure>
 
     <figure class="result-fig">
       <img src="../assets/img/vg8-screen-sprite.jpg" alt="Close-up of the VG8 output showing a tiled background and a single red hardware sprite" />
       <figcaption>
-        <span class="fig-lead">Tiles and a hardware sprite.</span> A close-up of the same output, down to the monitor&rsquo;s subpixels: a repeating tiled background with a single hardware sprite (red) composited over it by the PPU.
+        <span class="fig-lead">Tiles and a hardware sprite.</span> A close-up with sprites activated: the background tiles sit on a fixed grid, while the red sprite is free to sit between them. Sprites have positional flexibility that the tiled background does not.
       </figcaption>
     </figure>
   </div>
