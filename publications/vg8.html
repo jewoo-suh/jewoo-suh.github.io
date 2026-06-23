@@ -24,10 +24,10 @@
 
   <div class="page-body">
     <p>
-      The VG8 is a custom 8-bit game console implemented in Verilog on an FPGA, designed to recreate the core hardware of 1980s home computers and game consoles (NES, Commodore 64, ZX Spectrum, Apple II) at the register-transfer level. Not emulation: the hardware components (CPU, PPU, sound, memory bus) are synthesised and deployed directly on the FPGA, giving cycle-accurate reproduction of original behaviour.
+      The VG8 is a simplified 8-bit game console built from scratch in Verilog HDL on a contemporary FPGA (an iCEBreaker board), designed as a platform for directly comparing the hardware of 1980s personal computers and game consoles. Rather than emulating in software, every subsystem is implemented in hardware: an 8-bit CPU with ALU, a memory subsystem with RAM, VRAM, and ROM blocks, a Picture Processing Unit with tile-based rendering and hardware sprites, an Audio Processing Unit with multiple sound channels, and a unified memory-mapped I/O subsystem. All subsystems were tested and confirmed functional.
     </p>
     <p>
-      The thesis uses this as an empirical platform to compare the design decisions that separated the major 8-bit platforms. The aesthetic and technical characteristics that retrospectively define each system, such as the NES&rsquo;s tile sprites, the C64&rsquo;s SID sound, and the Spectrum&rsquo;s colour clash, were almost entirely consequences of specific hardware economies made at design time, not choices about what the machine should look or sound like.
+      With the working prototype alongside original hardware manuals and technical references, the thesis analyses the design trade-offs the two families of machine made. Game consoles favoured deterministic, real-time performance through dedicated hardware subsystems; personal computers favoured general-purpose architectures that bought expandability at the cost of greater latency. The result is both a documented hardware comparison for historical preservation and a baseline platform for future architectural studies.
     </p>
   </div>
 
