@@ -24,7 +24,7 @@
 
   <div class="page-body">
     <p>
-      Modern LLMs are rarely prompted once. Chain-of-thought, self-critique, and agentic loops all run a model repeatedly on its own previous output, trusting that iteration will settle on a stable answer the model endorses. This paper asks a precise question: can a model decide, of its own reasoning loop, that the loop has converged on an answer it endorses?
+      Modern LLMs are rarely prompted once. Chain-of-thought, self-critique, and agentic loops all run a model repeatedly on its own previous output, trusting that iteration will settle on a stable answer the model endorses. This paper asks: can a model decide, of its own reasoning loop, that the loop has converged on an answer it endorses?
     </p>
     <p>
       Mathematically, the answer is no: modelling a single forward pass as a computable function and the loop as the partial computation it induces, this paper shows that deciding convergence to a self-endorsed answer is &Sigma;&#8322;-complete, thus undecidable even given an oracle for the halting problem. Via self-referential arguments, the paper also shows that any evaluator you could actually implement as a prompt can be effectively falsified on an input built from its own description.
