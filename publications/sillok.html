@@ -35,5 +35,50 @@
     <a class="page-link" href="https://jewoo-suh.github.io/modern-sillok/sillok_paper.pdf" target="_blank" rel="noopener">PDF &rarr;</a>
   </div>
 
+  <div class="huff-box">
+    <div class="box-label">The Huffman tables</div>
+    <p style="font-size:0.84rem; color:#555; line-height:1.6; margin-bottom:18px;">
+      Each Hangul syllable is split into onset, vowel, and coda, and each position is coded against its own static, frequency-built table. Codes are ordered shortest (most frequent) first.
+    </p>
+    <div class="huff-table">
+      <div class="huff-cat">Onset (19)</div>
+      <div class="huff-codes"><span class="huff-pair"><span class="sym">&#12615;</span><span class="code">01</span></span><span class="huff-pair"><span class="sym">&#12616;</span><span class="code">000</span></span><span class="huff-pair"><span class="sym">&#12613;</span><span class="code">001</span></span><span class="huff-pair"><span class="sym">&#12593;</span><span class="code">101</span></span><span class="huff-pair"><span class="sym">&#12601;</span><span class="code">1001</span></span><span class="huff-pair"><span class="sym">&#12622;</span><span class="code">1101</span></span><span class="huff-pair"><span class="sym">&#12599;</span><span class="code">1110</span></span><span class="huff-pair"><span class="sym">&#12620;</span><span class="code">10000</span></span><span class="huff-pair"><span class="sym">&#12618;</span><span class="code">10001</span></span><span class="huff-pair"><span class="sym">&#12609;</span><span class="code">11000</span></span><span class="huff-pair"><span class="sym">&#12610;</span><span class="code">11110</span></span><span class="huff-pair"><span class="sym">&#12596;</span><span class="code">11111</span></span><span class="huff-pair"><span class="sym">&#12621;</span><span class="code">110010</span></span><span class="huff-pair"><span class="sym">&#12619;</span><span class="code">1100111</span></span><span class="huff-pair"><span class="sym">&#12600;</span><span class="code">11001100</span></span><span class="huff-pair"><span class="sym">&#12594;</span><span class="code">110011011</span></span><span class="huff-pair"><span class="sym">&#12614;</span><span class="code">1100110100</span></span><span class="huff-pair"><span class="sym">&#12611;</span><span class="code">11001101010</span></span><span class="huff-pair"><span class="sym">&#12617;</span><span class="code">11001101011</span></span></div>
+    </div>
+    <div class="huff-table">
+      <div class="huff-cat">Vowel (21)</div>
+      <div class="huff-codes"><span class="huff-pair"><span class="sym">&#12623;</span><span class="code">00</span></span><span class="huff-pair"><span class="sym">&#12631;</span><span class="code">010</span></span><span class="huff-pair"><span class="sym">&#12641;</span><span class="code">100</span></span><span class="huff-pair"><span class="sym">&#12643;</span><span class="code">110</span></span><span class="huff-pair"><span class="sym">&#12629;</span><span class="code">0110</span></span><span class="huff-pair"><span class="sym">&#12624;</span><span class="code">0111</span></span><span class="huff-pair"><span class="sym">&#12636;</span><span class="code">1011</span></span><span class="huff-pair"><span class="sym">&#12627;</span><span class="code">1110</span></span><span class="huff-pair"><span class="sym">&#12628;</span><span class="code">11111</span></span><span class="huff-pair"><span class="sym">&#12637;</span><span class="code">101000</span></span><span class="huff-pair"><span class="sym">&#12634;</span><span class="code">101001</span></span><span class="huff-pair"><span class="sym">&#12632;</span><span class="code">111100</span></span><span class="huff-pair"><span class="sym">&#12630;</span><span class="code">1010100</span></span><span class="huff-pair"><span class="sym">&#12625;</span><span class="code">1010101</span></span><span class="huff-pair"><span class="sym">&#12640;</span><span class="code">1010111</span></span><span class="huff-pair"><span class="sym">&#12635;</span><span class="code">1111010</span></span><span class="huff-pair"><span class="sym">&#12642;</span><span class="code">1111011</span></span><span class="huff-pair"><span class="sym">&#12639;</span><span class="code">10101101</span></span><span class="huff-pair"><span class="sym">&#12633;</span><span class="code">101011001</span></span><span class="huff-pair"><span class="sym">&#12626;</span><span class="code">1010110000</span></span><span class="huff-pair"><span class="sym">&#12638;</span><span class="code">1010110001</span></span></div>
+    </div>
+    <div class="huff-table">
+      <div class="huff-cat">Coda (28, including none)</div>
+      <div class="huff-codes"><span class="huff-pair"><span class="sym">&empty;</span><span class="code">1</span></span><span class="huff-pair"><span class="sym">&#12615;</span><span class="code">001</span></span><span class="huff-pair"><span class="sym">&#12596;</span><span class="code">011</span></span><span class="huff-pair"><span class="sym">&#12593;</span><span class="code">0100</span></span><span class="huff-pair"><span class="sym">&#12601;</span><span class="code">0101</span></span><span class="huff-pair"><span class="sym">&#12614;</span><span class="code">00001</span></span><span class="huff-pair"><span class="sym">&#12610;</span><span class="code">00010</span></span><span class="huff-pair"><span class="sym">&#12609;</span><span class="code">00011</span></span><span class="huff-pair"><span class="sym">&#12613;</span><span class="code">0000011</span></span><span class="huff-pair"><span class="sym">&#12598;</span><span class="code">00000000</span></span><span class="huff-pair"><span class="sym">&#12621;</span><span class="code">00000001</span></span><span class="huff-pair"><span class="sym">&#12612;</span><span class="code">000000101</span></span><span class="huff-pair"><span class="sym">&#12620;</span><span class="code">000000110</span></span><span class="huff-pair"><span class="sym">&#12602;</span><span class="code">000000111</span></span><span class="huff-pair"><span class="sym">&#12618;</span><span class="code">000001000</span></span><span class="huff-pair"><span class="sym">&#12616;</span><span class="code">000001010</span></span><span class="huff-pair"><span class="sym">&#12599;</span><span class="code">000001011</span></span><span class="huff-pair"><span class="sym">&#12622;</span><span class="code">0000010011</span></span><span class="huff-pair"><span class="sym">&#12595;</span><span class="code">00000010000</span></span><span class="huff-pair"><span class="sym">&#12594;</span><span class="code">00000100101</span></span><span class="huff-pair"><span class="sym">&#12619;</span><span class="code">000000100010</span></span><span class="huff-pair"><span class="sym">&#12608;</span><span class="code">000000100011</span></span><span class="huff-pair"><span class="sym">&#12607;</span><span class="code">000000100100</span></span><span class="huff-pair"><span class="sym">&#12606;</span><span class="code">000000100101</span></span><span class="huff-pair"><span class="sym">&#12605;</span><span class="code">000000100110</span></span><span class="huff-pair"><span class="sym">&#12604;</span><span class="code">000000100111</span></span><span class="huff-pair"><span class="sym">&#12603;</span><span class="code">000001001000</span></span><span class="huff-pair"><span class="sym">&#12597;</span><span class="code">000001001001</span></span></div>
+    </div>
+  </div>
+
+  <div class="encode-box">
+    <div class="box-label">Worked example: encoding &ldquo;&#54620;&#44544;&rdquo; (Hangul)</div>
+    <table class="encode-table">
+      <thead><tr><th>Syllable</th><th>Onset</th><th>Vowel</th><th>Coda</th><th>Bits</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="e-syl">&#54620;</td>
+          <td class="e-part">&#12622; <span class="e-bits">1101</span></td>
+          <td class="e-part">&#12623; <span class="e-bits">00</span></td>
+          <td class="e-part">&#12596; <span class="e-bits">011</span></td>
+          <td class="e-bits">110100011 (9)</td>
+        </tr>
+        <tr>
+          <td class="e-syl">&#44544;</td>
+          <td class="e-part">&#12593; <span class="e-bits">101</span></td>
+          <td class="e-part">&#12641; <span class="e-bits">100</span></td>
+          <td class="e-part">&#12601; <span class="e-bits">0101</span></td>
+          <td class="e-bits">1011000101 (10)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="encode-total">
+      &ldquo;&#54620;&#44544;&rdquo; encodes to <b>19 bits</b> in <code>.sillok</code> versus <b>48 bits</b> in UTF-8 (two 3-byte syllables): about 60% smaller, with no decoder table needed beyond Korean phonology itself.
+    </p>
+  </div>
+
 </body>
 </html>

@@ -254,6 +254,79 @@ h1.page-title {
 }
 .page-link:hover { color: #111; border-color: #111; }
 
+/* --- HUFFMAN TABLES + ENCODING EXAMPLE (sillok) --- */
+.huff-box { margin-top: 28px; }
+.huff-box .box-label, .encode-box .box-label {
+  font-size: 0.66rem; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #aaa; margin-bottom: 14px;
+}
+.huff-table { margin-bottom: 16px; }
+.huff-cat {
+  font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #4a7a6a; margin-bottom: 8px;
+}
+.huff-codes { line-height: 2; }
+.huff-pair {
+  display: inline-block;
+  margin: 0 10px 4px 0;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+.huff-pair .sym {
+  font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+  color: #222;
+}
+.huff-pair .code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 0.72rem;
+  color: #4a7a6a;
+  margin-left: 3px;
+}
+
+/* worked example */
+.encode-box { margin-top: 28px; }
+.encode-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin-bottom: 12px;
+}
+.encode-table th {
+  text-align: left;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aaa;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 12px 6px 0;
+}
+.encode-table td {
+  padding: 7px 12px 7px 0;
+  border-bottom: 1px solid #f2f2f0;
+  vertical-align: baseline;
+}
+.encode-table .e-syl {
+  font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+  font-size: 1.05rem;
+  color: #222;
+}
+.encode-table .e-part {
+  font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+  color: #555;
+}
+.encode-table .e-bits {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 0.76rem;
+  color: #4a7a6a;
+}
+.encode-total {
+  font-size: 0.86rem;
+  color: #333;
+  padding-top: 4px;
+}
+.encode-total b { color: #2a4a40; }
+
 /* --- FIGURES (results) --- */
 .figures-box { margin-top: 28px; }
 .figures-box .box-label {
