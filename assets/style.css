@@ -102,8 +102,8 @@ section h2 .h2-hint {
   align-items: baseline;
 }
 .edu-head h3 { font-size: 1rem; font-weight: 600; }
+.edu-head h3 .edu-college { font-size: 0.82rem; font-weight: 400; font-style: italic; color: #888; }
 .edu-head .edu-date { font-size: 0.82rem; color: #aaa; font-style: italic; flex-shrink: 0; margin-left: 12px; }
-.edu-sub { font-size: 0.88rem; color: #555; margin-top: 2px; }
 .edu-degree { font-size: 0.92rem; color: #222; margin-top: 9px; }
 .edu-detail { font-size: 0.84rem; color: #666; margin-top: 5px; line-height: 1.6; }
 .edu-detail a { color: #4a7a6a; text-decoration: none; border-bottom: 1px solid #cdd6d2; }
