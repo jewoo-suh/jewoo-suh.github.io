@@ -104,7 +104,6 @@ section h2 .h2-hint {
   border-bottom: 1px solid #cdd6d2;
 }
 .cv-link a:hover { border-color: #4a7a6a; }
-.cv-link .cv-hint { color: #aaa; font-weight: 400; font-size: 0.8rem; margin-left: 7px; }
 
 /* --- EDUCATION --- */
 .edu-head {
