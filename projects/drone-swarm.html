@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evolved Swarm Behaviour | Jewoo Suh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Jewoo Suh</a>
+    <span>/</span>
+    Projects
+    <span>/</span>
+    Evolved Swarm Behaviour
+  </div>
+
+  <h1 class="page-title">Evolved Swarm Behaviour</h1>
+  <div class="page-meta">Ongoing &nbsp;&middot;&nbsp; Genetic Algorithms &nbsp;&middot;&nbsp; Emergent Behaviour</div>
+
+  <img class="page-hero" src="../assets/img/drone-swarm-shot.png" alt="Side-by-side simulation of an evolved swarm and a velocity-obstacle baseline" />
+
+  <div class="page-body">
+
+    <p>
+      Drone swarms are typically coordinated through explicit mechanisms: a designated leader, negotiated role assignment, or continuous communication between units. However, such mechanisms scale poorly as the swarm grows, and the resulting behaviour is only as robust as the channel carrying it, degrading when communication is lost or the leader is removed.
+    </p>
+
+    <p>
+      This project is aimed at producing coordinated drone movement without any of these mechanisms. Every drone runs an identical neural network, reads only its own local sensing, and this single shared network is optimised by a genetic algorithm, so any apparent coordination must emerge from identical policies responding to a shared situation. The target behaviour is drawn from bees: holding formation, scattering when threatened, and regrouping afterwards. The main difficulty is that scattering and cohesion pull against one another, so a swarm that disperses effectively tends to remain dispersed.
+    </p>
+
+    <p>
+      The first full run reached this target, with twelve drones sharing one evolved network of roughly eight thousand parameters ending as a single reformed cluster in every held-out episode. That version has since been archived and the system is being rebuilt, evaluating the evolved policy against a velocity-obstacle baseline and a gradient-trained graph network rather than in isolation.
+    </p>
+
+  </div>
+
+</body>
+</html>
