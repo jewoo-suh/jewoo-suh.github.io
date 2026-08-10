@@ -95,6 +95,17 @@ section h2 .h2-hint {
 }
 .about-text p:last-child { margin-bottom: 0; }
 
+/* --- CV LINK --- */
+.cv-link { margin-top: 18px; font-size: 0.88rem; }
+.cv-link a {
+  color: #4a7a6a;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #cdd6d2;
+}
+.cv-link a:hover { border-color: #4a7a6a; }
+.cv-link .cv-hint { color: #aaa; font-weight: 400; font-size: 0.8rem; margin-left: 7px; }
+
 /* --- EDUCATION --- */
 .edu-head {
   display: flex;
