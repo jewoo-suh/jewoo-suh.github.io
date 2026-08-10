@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Etymology Tree | Jewoo Suh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Jewoo Suh</a>
+    <span>/</span>
+    Projects
+    <span>/</span>
+    Etymology Tree
+  </div>
+
+  <h1 class="page-title">Etymology Tree</h1>
+  <div class="page-meta">Completed &nbsp;&middot;&nbsp; Computational Linguistics &nbsp;&middot;&nbsp; Data Visualisation</div>
+
+  <img class="page-hero" src="../assets/img/etymology-shot.png" alt="The Etymology Tree interface showing the descent of the word father" />
+
+  <div class="page-body">
+
+    <p>
+      <a href="https://jewoo-suh.github.io/etymology-tree/" target="_blank" rel="noopener">Etymology Tree</a> is a project aimed at tracing and visualising the etymological descent of words. Given a word in any language, the tree walks back through the attested ancestors of that word to a reconstructed proto-form, then renders the full tree of forms descending from the same root. The current build covers 2,000,000 words across 4,502 languages and 1,375,000 definitions, extracted from the Wiktionary dump.
+    </p>
+
+    <p>
+      The main difficulty of the project was that etymology for words is often not a clean tree shape. Borrowing moves words sideways between branches, forms merge, and a single spelling can descend from two unrelated roots, so the underlying structure is a directed acyclic graph. To tackle this issue, word senses were keyed together (rather than spellings), which keeps homographs such as the two senses of <em>bank</em> as separate nodes instead of collapsing them into one. Search is accent-folding, so an ASCII query such as <code>pater</code> retrieves <em>pat&#7717;r</em>, <em>pat&#275;r</em> and <em>pater</em> together.
+    </p>
+
+    <p>
+      The resulting graph makes long borrowing chains legible. <em>Whisky</em> and <em>water</em> resolve to a common root, as do <em>grammar</em> and <em>carve</em>, the latter through Proto-Indo-European <em>*gerb&#688;-</em>, &ldquo;to scratch&rdquo;, reflecting that writing began as marks scratched into a surface.
+    </p>
+
+  </div>
+
+</body>
+</html>
